@@ -1,0 +1,563 @@
+ID,COGNOME,NOME_COMPLETO,RUOLO,VALORE,SQUADRA,NAZIONALITA
+4431,Carnesecchi,Marco Carnesecchi,P,14,Atalanta,Italia
+2297,Rossi F.,Francesco Rossi,P,1,Atalanta,Italia
+4,Sportiello,Marco Sportiello,P,1,Atalanta,Italia
+6444,Bonfanti,Giovanni Bonfanti,D,2,Atalanta,Italia
+787,Djimsiti,Berat Djimsiti,D,8,Atalanta,Albania;Svizzera
+6046,Hien,Isak Hien,D,10,Atalanta,Svezia;Burkina Faso
+5526,Scalvini,Giorgio Scalvini,D,8,Atalanta,Italia
+5578,Kossounou,Odilon Kossounou,D,9,Atalanta,Costa d''Avorio
+2640,Kolasinac,Sead Kolasinac,D,7,Atalanta,Bosnia Erzegovina;Germania
+6916,Ahanor,Honest Ahanor,D,6,Atalanta,Italia;Nigeria
+4887,Bellanova,Raoul Bellanova,D,13,Atalanta,Italia
+6832,Palestra,Marco Palestra,D,3,Cagliari,Italia
+554,Zappacosta,Davide Zappacosta,D,13,Atalanta,Italia
+22,De Roon,Marten De Roon,C,12,Atalanta,Olanda
+5792,Ederson D.S.,Ederson da Silva,C,15,Atalanta,Brasile
+6024,Sulemana I.,Ibrahim Sulemana,C,4,Atalanta,Ghana
+4947,Brescianini,Marco Brescianini,C,8,Atalanta,Italia
+2077,Pasalic,Mario Pasalic,C,10,Atalanta,Croazia
+5119,Samardzic,Lazar Samardzic,C,12,Atalanta,Germania;Serbia
+4896,Maldini,Daniel Maldini,C,9,Atalanta,Italia;Venezuela
+5995,De Ketelaere,Charles De Ketelaere,A,21,Atalanta,Belgio
+5918,Sulemana K.,Kamaldeen Sulemana,A,9,Atalanta,Ghana
+4730,Lookman,Ademola Lookman,A,28,Atalanta,Inghilterra;Nigeria
+2137,Scamacca,Gianluca Scamacca,A,20,Atalanta,Italia
+6229,Tourè E.,El Bilal Tourè,A,7,Atalanta,Mali;Costa D''Avorio
+7172,Pessina Mas.,Massimo Pessina,P,1,Bologna,Bologna
+2722,Ravaglia F.,Federico Ravaglia,P,3,Bologna,Italia
+133,Skorupski,Lukasz Skorupski,P,10,Bologna,Polonia
+5498,Casale,Nicolò Casale,D,4,Bologna,Italia
+4982,Erlic,Martin Erlic,D,3,Bologna,Croazia
+6551,Ilic M.,Mihajlo Ilic,D,1,Bologna,Serbia
+6042,Lucumì,Jhon Lucumì,D,8,Bologna,Colombia
+7068,Vitik,Martin Vitik,D,8,Bologna,Repubblica Ceca
+6066,Posch,Stefan Posch,D,5,Bologna,Austria
+487,De Silvestri,Lorenzo De Silvestri,D,4,Bologna,Italia
+5678,Holm,Emil Holm,D,8,Bologna,Svezia
+2653,Lykogiannis,Charalampos Lykogiannis,D,5,Bologna,Grecia
+4734,Miranda J.,Juan Miranda,D,9,Bologna,Spagna
+6225,El Azzouzi,Oussama El Azzouzi,C,3,Bologna,Marocco;Olanda
+788,Freuler,Remo Freuler,C,11,Bologna,Svizzera
+6054,Moro N.,Nikola Moro,C,3,Bologna,Croazia
+5298,Pobega,Tommaso Pobega,C,8,Bologna,Italia
+5784,Aebischer,Michel Aebischer,C,4,Pisa,Svizzera
+6206,Fabbian,Giovanni Fabbian,C,10,Bologna,Italia
+5858,Ferguson,Lewis Ferguson,C,11,Bologna,Scozia
+5564,Ndoye,Dan Ndoye,C,19,Bologna,Svizzera;Senegal
+184,Bernardeschi,Federico Bernardeschi,C,9,Bologna,Italia
+2167,Orsolini,Riccardo Orsolini,C,30,Bologna,Italia
+2765,Odgaard,Jens Odgaard,C,15,Bologna,Danimarca
+6895,Dominguez B.,Benjamin Dominguez,A,9,Bologna,Argentina
+6459,Karlsson,Jesper Karlsson,A,3,Bologna,Svezia
+4436,Cambiaghi,Nicolò Cambiaghi,A,11,Bologna,Italia
+6572,Castro S.,Santiago Castro,A,19,Bologna,Argentina
+6643,Dallinga,Thijs Dallinga,A,10,Bologna,Olanda
+785,Immobile,Ciro Immobile,A,19,Bologna,Italia
+4360,Caprile,Elia Caprile,P,7,Cagliari,Italia
+4929,Ciocci,Giuseppe Ciocci,P,1,Cagliari,Italia
+3,Radunovic,Boris Radunovic,P,1,Cagliari,Serbia
+393,Luperto,Sebastiano Luperto,D,9,Cagliari,Italia
+4210,Mina,Yerry Mina,D,7,Cagliari,Colombia
+6464,Wieteska,Mateusz Wieteska,D,1,Cagliari,Polonia
+5701,Obert,Adam Obert,D,4,Cagliari,Slovacchia
+6636,Veroli,Davide Veroli,D,1,Cagliari,Italia
+4461,Zappa,Gabriele Zappa,D,6,Cagliari,Italia
+5406,Di Pardo,Alessandro Di Pardo,D,2,Cagliari,Italia
+7125,Idrissi R.,Riyad Idrissi,D,4,Cagliari,Italia;Marocco
+4433,Zortea,Nadir Zortea,D,16,Bologna,Italia
+4870,Adopo,Michel Adopo,C,5,Cagliari,Francia;Costa d''Avorio
+1871,Deiola,Alessandro Deiola,C,5,Cagliari,Italia
+7165,Liteta,Joseph Liteta,C,1,Cagliari,Zambia
+6424,Prati,Matteo Prati,C,4,Cagliari,Italia
+6252,Folorunsho,Michael Folorunsho,C,9,Cagliari,Italia;Nigeria
+6640,Felici,Mattia Felici,C,6,Cagliari,Italia
+4364,Gaetano,Gianluca Gaetano,C,9,Cagliari,Italia
+5297,Luvumbo,Zito Luvumbo,A,12,Cagliari,Angola
+6243,Borrelli,Gennaro Borrelli,A,5,Cagliari,Italia
+247,Pavoletti,Leonardo Pavoletti,A,1,Cagliari,Italia
+4359,Piccoli,Roberto Piccoli,A,17,Fiorentina,Italia
+6966,Butez,Jean Butez,P,11,Como,Francia
+2809,Vigorito,Mauro Vigorito,P,1,Como,Italia
+6230,Dossena,Alberto Dossena,D,4,Como,Italia
+418,Goldaniga,Edoardo Goldaniga,D,4,Como,Italia
+6893,Kempf,Marc Oliver Kempf,D,5,Como,Germania
+7014,Smolcic I.,Ivan Smolcic,D,3,Como,Croazia
+6944,Jack,Fellipe Jack,D,2,Como,Brasile;Italia
+6896,Van Der Brempt,Ignace Van der Brempt,D,4,Como,Belgio
+4994,Vojvoda,Mergim Vojvoda,D,7,Como,Kosovo;Belgio
+5435,Moreno Alb.,Alberto Moreno,D,3,Como,Spagna
+6867,Valle,Alex Valle,D,7,Como,Spagna
+6656,Braunoder,Matthias Braunoder,C,1,Como,Austria
+6676,Engelhardt,Yannik Engelhardt,C,2,Como,Germania
+6151,Perrone,Maximo Perrone,C,8,Como,Argentina
+4284,Sergi Roberto,Sergi Roberto,C,4,Como,Spagna
+5036,Caqueret,Maxence Caqueret,C,12,Como,Francia
+5559,Da Cunha,Lucas Da Cunha,C,12,Como,Francia;Portogallo
+4486,Strefezza,Gabriel Strefezza,C,14,Como,Brasile;Italia
+2553,Alli,Dele Alli,C,1,Como,Inghilterra;Nigeria
+7126,Baturina,Martin Baturina,C,9,Como,Croazia
+6875,Paz N.,Nico Paz,C,21,Como,Argentina;Spagna
+7127,Addai,Jayden Addai,A,7,Como,Olanda;Ghana
+6967,Diao,Assane Diao,A,17,Como,Spagna;Senegal
+7128,Kuhn,Nicolas Kuhn,A,14,Como,Germania
+7129,Rodriguez Je.,Jesus Rodriguez,A,6,Como,Spagna
+7027,Azon,Ivan Azon,A,1,Como,Spagna
+2155,Cutrone,Patrick Cutrone,A,10,Como,Italia
+7017,Douvikas,Anastasios Douvikas,A,9,Como,Grecia
+6657,Gabrielloni,Alessandro Gabrielloni,A,1,Como,Italia
+761,Audero,Emil Audero,P,6,Cremonese,Italia;Indonesia
+6505,Nava,Lapo Nava,P,1,Cremonese,Italia
+612,Bianchetti,Matteo Bianchetti,D,4,Cremonese,Italia
+7130,Folino,Francesco Folino,D,4,Cremonese,Italia
+5860,Ravanelli,Luca Ravanelli,D,2,Cremonese,Italia
+1891,Ceccherini,Federico Ceccherini,D,4,Cremonese,Italia
+7131,Floriani Mussolini,Romano Floriani Mussolini,D,5,Cremonese,Italia
+6231,Azzi,Paulo Azzi,D,3,Cremonese,Brasile;Italia
+770,Pezzella Giu.,Giuseppe Pezzella,D,6,Cremonese,Italia
+5891,Quagliata,Giacomo Quagliata,D,1,Cremonese,Italia
+6013,Barbieri,Tommaso Barbieri,D,3,Cremonese,Italia
+2847,Sernicola,Leonardo Sernicola,D,1,Cremonese,Italia
+5863,Castagnetti,Michele Castagnetti,C,3,Cremonese,Italia
+7132,Collocolo,Michele Collocolo,C,8,Cremonese,Italia
+27,Grassi,Alberto Grassi,C,4,Cremonese,Italia
+5857,Pickel,Charles Pickel,C,2,Cremonese,Svizzera;Repubblica Democratica del Congo
+2274,Valoti,Mattia Valoti,C,7,Cremonese,Italia
+2842,Zanimacchia,Luca Zanimacchia,C,5,Cremonese,Italia
+7133,Vandeputte,Jari Vandeputte,C,12,Cremonese,Belgio
+449,Vazquez,Franco Vazquez,C,10,Cremonese,Italia;Spagna
+5496,Johnsen,Dennis Johnsen,A,7,Cremonese,Norvegia
+505,Bonazzoli,Federico Bonazzoli,A,4,Cremonese,Italia
+5515,Okereke,David Okereke,A,5,Cremonese,Nigeria
+5512,De Luca,Manuel De Luca,A,8,Cremonese,Italia
+7134,Nasti,Marco Nasti,A,1,Cremonese,Italia
+6403,Christensen O.,Oliver Christensen,P,1,Fiorentina,Danimarca
+2521,De Gea,David De Gea,P,14,Fiorentina,Spagna
+6184,Martinelli T.,Tommaso Martinelli,P,1,Fiorentina,Italia
+6495,Comuzzo,Pietro Comuzzo,D,7,Fiorentina,Italia
+4904,Marì,Pablo Marì,D,7,Fiorentina,Spagna
+5603,Pongracic,Marin Pongracic,D,5,Fiorentina,Croazia;Germania
+5718,Viti,Mattia Viti,D,4,Fiorentina,Italia
+4378,Ranieri L.,Luca Ranieri,D,7,Fiorentina,Italia
+5885,Dodò,Dodò,D,11,Fiorentina,Brasile
+7069,Fortini,Niccolò Fortini,D,3,Fiorentina,Italia
+2160,Gosens,Robin Gosens,D,18,Fiorentina,Germania;Olanda
+5449,Parisi,Fabiano Parisi,D,5,Fiorentina,Italia
+5516,Bianco,Alessandro Bianco,C,1,Fiorentina,Italia
+1933,Mandragora,Rolando Mandragora,C,15,Fiorentina,Italia
+6294,Ndour,Cher Ndour,C,2,Fiorentina,Italia;Senegal
+6804,Richardson,Amir Richardson,C,4,Fiorentina,Marocco;Francia
+4465,Fagioli,Nicolò Fagioli,C,8,Fiorentina,Italia
+6010,Fazzini,Jacopo Fazzini,C,11,Fiorentina,Italia
+5788,Sabiri,Abdelhamid Sabiri,C,2,Fiorentina,Germania;Maroccco
+5800,Gudmundsson A.,Albert Gudmundsson,C,24,Fiorentina,Islanda
+6409,Beltran L.,Lucas Beltran,A,7,Fiorentina,Argentina;Italia
+647,Dzeko,Edin Dzeko,A,15,Fiorentina,Bosnia Erzegovina
+2097,Kean,Moise Kean,A,32,Fiorentina,Italia;Costa d''Avorio
+188,Leali,Nicola Leali,P,9,Genoa,Italia
+6991,Siegrist,Benjamin Siegrist,P,1,Genoa,Svizzera
+219,Sommariva,Daniele Sommariva,P,1,Genoa,Italia
+6660,Marcandalli,Alessandro Marcandalli,D,4,Genoa,Italia;Nigeria
+6977,Otoa,Sebastian Otoa,D,2,Genoa,Danimarca
+5739,De Winter,Koni De Winter,D,8,Milan,Belgio
+6245,Vogliacco,Alessandro Vogliacco,D,3,Genoa,Italia
+5514,Vasquez,Johan Vasquez,D,9,Genoa,Messico
+6814,Norton-Cuffy,Brooke Norton-Cuffy,D,3,Genoa,Inghilterra;Dominica
+2593,Martin,Aaron Martin,D,10,Genoa,Spagna
+791,Sabelli,Stefano Sabelli,D,5,Genoa,Italia
+5791,Frendrup,Morten Frendrup,C,9,Genoa,Danimarca
+6917,Masini,Patrizio Masini,C,5,Genoa,Italia
+6020,Ellertsson,Mikael Egill Ellertsson,C,5,Genoa,Islanda
+4970,Messias,Junior Messias,C,8,Genoa,Brasile
+4427,Malinovskyi,Ruslan Malinovskyi,C,8,Genoa,Ucraina
+7135,Stanciu,Nicolae Stanciu,C,8,Genoa,Romania
+4404,Thorsby,Morten Thorsby,C,5,Genoa,Norvegia
+6980,Venturino,Lorenzo Venturino,C,3,Genoa,Italia
+6722,Gronbaek,Albert Gronbaek,C,12,Genoa,Danimarca
+6106,Carboni V.,Valentin Carboni,C,11,Genoa,Argentina;Italia
+6822,Ekhator,Jeff Ekhator,A,1,Genoa,Italia;Nigeria
+5506,Ekuban,Caleb Ekuban,A,2,Genoa,Ghana;Italia
+4923,Colombo,Lorenzo Colombo,A,11,Genoa,Italia
+6164,Vitinha O.,Vitinha Carvalho Olivera,A,12,Genoa,Portogallo
+1926,Di Gennaro,Raffaele Di Gennaro,P,1,Inter,Italia
+5116,Martinez Jo.,Josep Martinez,P,2,Inter,Spagna
+2428,Sommer,Yann Sommer,P,16,Inter,Svizzera
+513,Acerbi,Francesco Acerbi,D,9,Inter,Italia
+2120,Bastoni,Alessandro Bastoni,D,17,Inter,Italia
+6217,Bisseck,Yann Bisseck,D,9,Inter,Germania;Camerun
+322,De Vrij,Stefan De Vrij,D,9,Inter,Olanda
+4177,Pavard,Benjamin Pavard,D,8,Inter,Francia
+2525,Darmian,Matteo Darmian,D,4,Inter,Italia
+5877,Carlos Augusto,Carlos Augusto,D,10,Inter,Brasile
+254,Dimarco,Federico Dimarco,D,19,Inter,Italia
+5513,Dumfries,Denzel Dumfries,D,20,Inter,Olanda;Aruba
+5301,Luis Henrique,Luis Henrique,C,7,Inter,Brasile
+5422,Zalewski,Nicola Zalewski,C,7,Atalanta,Polonia
+5719,Asllani,Kristjan Asllani,C,4,Torino,Albania
+2194,Calhanoglu,Hakan Calhanoglu,C,22,Inter,Turchia;Germania
+1870,Barella,Nicolò Barella,C,14,Inter,Italia
+7070,Sucic P.,Petar Sucic,C,10,Inter,Croazia;Bosnia Erzegovina
+2529,Mkhitaryan,Henrikh Mkhitaryan,C,9,Inter,Armenia
+2848,Frattesi,Davide Frattesi,C,14,Inter,Italia
+152,Zielinski,Piotr Zielinski,C,4,Inter,Polonia
+4463,Esposito Se.,Sebastiano Esposito,A,7,Cagliari,Italia
+6669,Bonny,Ange-Yoan Bonny,A,7,Inter,Francia;Costa d''Avorio
+7071,Esposito F.P.,Francesco Pio Esposito,A,7,Inter,Italia
+2764,Martinez L.,Lautaro Martinez,A,35,Inter,Argentina
+6628,Taremi,Mehdi Taremi,A,4,Inter,Iran
+4871,Thuram,Marcus Thuram,A,31,Inter,Francia;Guadalupe
+5876,Di Gregorio,Michele Di Gregorio,P,16,Juventus,Italia
+218,Perin,Mattia Perin,P,1,Juventus,Italia
+1930,Pinsoglio,Carlo Pinsoglio,P,1,Juventus,Italia
+2788,Bremer,Gleison Bremer,D,13,Juventus,Brasile
+5831,Gatti,Federico Gatti,D,8,Juventus,Italia
+294,Rugani,Daniele Rugani,D,3,Juventus,Italia
+4976,Kalulu,Pierre Kalulu,D,9,Juventus,Francia;Repubblica Democratica del Congo
+6766,Kelly L.,Lloyd Kelly,D,7,Juventus,Inghilterra
+6802,Savona,Nicolò Savona,D,3,Juventus,Italia
+6039,Cabal,Juan Cabal,D,5,Juventus,Colombia
+6803,Rouhi,Jonas Rouhi,D,1,Juventus,Svezia;Marocco
+5520,Cambiaso,Andrea Cambiaso,D,14,Juventus,Italia
+7175,Joao Mario,Joao Mario Neto Lopes,D,8,Juventus,Portogallo
+4711,Kostic,Filip Kostic,C,4,Juventus,Serbia
+4662,Weah,Timothy Weah,C,7,Juventus,Stati Uniti;Francia
+827,Locatelli,Manuel Locatelli,C,12,Juventus,Italia
+4973,McKennie,Weston McKennie,C,10,Juventus,Stati Uniti
+5562,Thuram K.,Khephren Thuram,C,16,Juventus,Francia;Guadalupa
+4911,Douglas Luiz,Douglas Luiz,C,3,Juventus,Brasile
+5813,Miretti,Fabio Miretti,C,5,Juventus,Italia
+5685,Koopmeiners,Teun Koopmeiners,C,14,Juventus,Olanda
+6884,Conceicao,Francisco Conceicao,C,18,Juventus,Portogallo
+4179,Gonzalez N.,Nicolas Ivan Gonzalez,A,12,Juventus,Argentina
+6434,Yildiz,Kenan Yildiz,A,25,Juventus,Turchia;Germania
+5544,David,Jonathan David,A,28,Juventus,Canada;Stati Uniti
+2012,Milik,Arkadiusz Milik,A,1,Juventus,Polonia
+2841,Vlahovic,Dusan Vlahovic,A,25,Juventus,Serbia
+6417,Furlanetto,Alessio Furlanetto,P,1,Lazio,Italia
+6482,Mandas,Christos Mandas,P,3,Lazio,Grecia
+2814,Provedel,Ivan Provedel,P,12,Lazio,Italia
+5899,Gigot,Samuel Gigot,D,4,Lazio,Francia
+5833,Gila,Mario Gila,D,9,Lazio,Spagna
+460,Romagnoli,Alessio Romagnoli,D,8,Lazio,Italia
+7012,Provstgaard,Oliver Provstgaard,D,3,Lazio,Danimarca
+327,Patric,Patric Gabarron,D,4,Lazio,Spagna
+2263,Lazzari,Manuel Lazzari,D,4,Lazio,Italia
+2728,Pellegrini Lu.,Luca Pellegrini,D,3,Lazio,Italia
+5620,Tavares N.,Nuno Tavares,D,11,Lazio,Portogallo;Capo Verde
+140,Hysaj,Elseid Hysaj,D,3,Lazio,Albania
+2188,Marusic,Adam Marusic,D,8,Lazio,Montenegro;Serbia
+6191,Belahyane,Reda Belahyane,C,4,Lazio,Francia;Marocco
+333,Cataldi,Danilo Cataldi,C,5,Lazio,Italia
+4459,Rovella,Nicolò Rovella,C,8,Lazio,Italia
+181,Vecino,Matias Vecino,C,6,Lazio,Uruguay;Italia
+5674,Basic,Toma Basic,C,1,Lazio,Croazia
+4186,Guendouzi,Matteo Guendouzi,C,11,Lazio,Francia;Marocco
+6629,Dele-Bashiru,Fisayo Dele-Bashiru,C,11,Lazio,Nigeria;Inghilterra
+6398,Isaksen,Gustav Isaksen,C,14,Lazio,Danimarca
+632,Zaccagni,Mattia Zaccagni,C,25,Lazio,Italia
+5500,Cancellieri,Matteo Cancellieri,A,3,Lazio,Italia
+6556,Noslin,Tijjani Noslin,A,7,Lazio,Olanda
+2489,Pedro,Pedro,A,13,Lazio,Spagna
+6226,Castellanos,Taty Castellanos,A,20,Lazio,Argentina
+5672,Dia,Boulaye Dia,A,20,Lazio,Senegal;Francia
+2134,Falcone,Wladimiro Falcone,P,7,Lecce,Italia
+2401,Fruchtl,Christian Fruchtl,P,1,Lecce,Germania
+6523,Samooja,Jasper Samooja,P,1,Lecce,Finlandia
+5835,Baschirotto,Federico  Baschirotto,D,10,Cremonese,Italia
+6632,Gaspar K.,Kialonda Gaspar,D,8,Lecce,Angola
+6883,Jean,Gaby Jean,D,3,Lecce,Francia
+6989,Tiago Gabriel,Tiago Gabriel,D,2,Lecce,Portogallo
+7164,Perez M.,Matias Perez,D,1,Lecce,Cile
+7136,Kouassi,Christ-Owen Kouassi,D,4,Lecce,Francia;Costa d''Avorio
+6990,Veiga D.,Danilo Veiga,D,2,Lecce,Portogallo;Brasile
+4502,Gallo,Antonino Gallo,D,6,Lecce,Italia
+7182,Ndaba,Corrie Ndaba,D,1,Lecce,Irlanda;Ghana
+5504,Coulibaly L.,Lassana Coulibaly,C,8,Lecce,Mali
+6410,Kaba,Mohamed Kaba,C,2,Lecce,Francia;Guinea
+5457,Maleh,Youssef Maleh,C,6,Lecce,Italia;Marocco
+6633,Pierret,Balthazar Pierret,C,6,Lecce,Francia
+6394,Ramadani,Ylber Ramadani,C,6,Lecce,Albania;Kosovo
+6015,Berisha M.,Medon Berisha,C,3,Lecce,Svizzera;Kosovo
+5872,Helgason,Thorir Johann Helgason,C,8,Lecce,Islanda
+6222,Rafia,Hamza Rafia,C,3,Lecce,Tunisia;Francia
+6634,Tete Morente,Tete Morente,C,9,Lecce,Spagna
+6645,Marchwinski,Filip Marchwinski,C,1,Lecce,Polonia
+6549,Pierotti,Santiago Pierotti,C,10,Lecce,Argentina;Italia
+6001,Banda,Lameck Banda,A,5,Lecce,Zambia
+7001,N'Dri,Konan N'Dri,A,5,Lecce,Costa D''Avorio
+6519,Camarda,Francesco Camarda,A,11,Lecce,Italia
+6435,Krstovic,Nikola Krstovic,A,20,Atalanta,Serbia;Montenegro
+4312,Maignan,Mike Maignan,P,15,Milan,Francia;Guyana Francese
+2815,Terracciano,Pietro Terracciano,P,1,Milan,Italia
+6813,Torriani,Lorenzo Torriani,P,1,Milan,Italia
+4401,Gabbia,Matteo Gabbia,D,6,Milan,Italia
+5022,Pavlovic,Strahinja Pavlovic,D,8,Milan,Serbia
+6055,Thiaw,Malick Thiaw,D,4,Milan,Germania;Finlandia
+4751,Tomori,Fikayo Tomori,D,8,Milan,Inghilterra;Canada
+6496,Bartesaghi,Davide Bartesaghi,D,3,Milan,Italia
+5273,Estupinan,Pervis Estupinan,D,12,Milan,Ecuador;Spagna
+6531,Jimenez A.,Alex Jimenez,D,5,Milan,Spagna
+5812,Terracciano F.,Filippo Terracciano,D,3,Cremonese,Italia
+4892,Saelemaekers,Alexis Saelemaekers,C,12,Milan,Belgio
+5992,Bondo,Warren Bondo,C,3,Cremonese,Francia;Repubblica Democratica del Congo
+4686,Fofana Y.,Youssouf Fofana,C,11,Milan,Francia;Mali
+5453,Ricci S.,Samuele Ricci,C,10,Milan,Italia
+2606,Modric,Luka Modric,C,12,Milan,Croazia
+5295,Musah,Junus Musah,C,6,Milan,Inghilterra;Ghana
+4199,Loftus-Cheek,Ruben Loftus-Cheek,C,8,Milan,Inghilterra;Giamaica
+4856,Chukwueze,Samuel Chukwueze,C,4,Milan,Nigeria
+6678,Liberali,Mattia Liberali,C,1,Milan,Italia
+2423,Pulisic,Christian Pulisic,C,28,Milan,Stati Uniti;Croazia
+4510,Leao,Rafael Leao,A,23,Milan,Portogallo;Angola
+6227,Okafor,Noah Okafor,A,4,Milan,Svizzera;Nigeria
+7008,Gimenez,Santiago Gimenez,A,24,Milan,Messico;Italia
+2845,Contini,Nikita Contini,P,1,Napoli,Italia;Ucraina
+572,Meret,Alex Meret,P,16,Napoli,Italia
+2170,Milinkovic-Savic V.,Vanja Milinkovic-Savic,P,4,Napoli,Serbia;Spagna
+6202,Beukema,Sam Beukema,D,10,Napoli,Olanda
+2724,Buongiorno,Alessandro Buongiorno,D,13,Napoli,Italia
+6809,Marianucci,Luca Marianucci,D,3,Napoli,Italia
+4409,Rrahmani,Amir Rrahmani,D,11,Napoli,Kosovo;Albania
+256,Juan Jesus,Juan Jesus,D,4,Napoli,Brasile;Italia
+2816,Di Lorenzo,Giovanni Di Lorenzo,D,14,Napoli,Italia
+5527,Zanoli,Alessandro Zanoli,D,3,Napoli,Italia
+5840,Olivera,Mathias Olivera,D,10,Napoli,Uruguay;Spagna
+1852,Spinazzola,Leonardo Spinazzola,D,7,Napoli,Italia
+5481,Mazzocchi,Pasquale Mazzocchi,D,3,Napoli,Italia
+5998,Zerbin,Alessio Zerbin,C,4,Cremonese,Italia
+5131,Gilmour,Billy Gilmour,C,7,Napoli,Scozia
+4287,Lobotka,Stanislav Lobotka,C,9,Napoli,Slovacchia
+4220,Zambo Anguissa,Andrè Zambo Anguissa,C,15,Napoli,Camerun
+4777,McTominay,Scott McTominay,C,27,Napoli,Scozia;Inghilterra
+536,Politano,Matteo Politano,C,16,Napoli,Italia
+2517,De Bruyne,Kevin De Bruyne,C,24,Napoli,Belgio
+6831,Neres,David Neres,C,13,Napoli,Brasile
+7120,Lang,Noa Lang,A,19,Napoli,Olanda;Suriname
+4371,Raspadori,Giacomo Raspadori,A,13,Napoli,Italia
+6215,Lucca,Lorenzo Lucca,A,14,Napoli,Italia
+2531,Lukaku,Romelu Lukaku,A,30,Napoli,Belgio;Repubblica Democratica del Congo
+2061,Simeone,Giovanni Simeone,A,8,Torino,Argentina;Spagna
+6662,Corvi,Edoardo Corvi,P,1,Parma,Italia
+5338,Rinaldi,Filippo Rinaldi,P,1,Parma,Italia
+6641,Suzuki,Zion Suzuki,P,7,Parma,Giappone
+5353,Balogh,Botond Balogh,D,3,Parma,Ungheria
+6663,Circati,Alessandro Circati,D,5,Parma,Australia;Italia
+6887,Leoni,Giovanni Leoni,D,7,Parma,Italia
+5307,Valenti,Lautaro Valenti,D,4,Parma,Argentina
+6664,Delprato,Enrico Delprato,D,8,Parma,Italia
+6821,Hainaut,Antoine Hainaut,D,2,Parma,Francia
+6965,Lovik,Mathias Fjortoft Lovik,D,3,Parma,Norvegia
+5862,Valeri,Emanuele Valeri,D,10,Parma,Italia
+5290,Estevez,Nahuel Estevez,C,2,Parma,Argentina
+6898,Keita M.,Mandela Keita,C,6,Parma,Belgio;Guinea
+7138,Ordonez C.,Christian Ordonez,C,5,Parma,Argentina
+6666,Bernabè,Adrian Bernabè,C,11,Parma,Spagna
+4423,Hernani,Hernani,C,7,Parma,Brasile
+5319,Sohm,Simon Sohm,C,12,Fiorentina,Svizzera;Nigeria
+5393,Man,Dennis Man,C,11,Parma,Romania
+6984,Ondrejka,Jacob Ondrejka,C,13,Parma,Svezia
+6207,Almqvist,Pontus Almqvist,A,4,Parma,Svezia
+6667,Benedyczak,Adrian Benedyczak,A,1,Parma,Polonia
+5471,Djuric,Milan Djuric,A,9,Parma,Bosnia Erzegovina;Italia
+7023,Pellegrino M.,Mateo Pellegrino,A,13,Parma,Argentina;Spagna
+2271,Nicolas,Nicolas David Andrade,P,1,Pisa,Brasile;Italia
+574,Scuffet,Simone Scuffet,P,3,Pisa,Italia
+2861,Semper,Adrian Semper,P,4,Pisa,Croazia
+7139,Canestrelli,Simone Canestrelli,D,4,Pisa,Italia
+2273,Caracciolo A.,Antonio Caracciolo,D,5,Pisa,Italia
+7140,Coppola F.,Francesco Coppola,D,1,Pisa,Italia;Cuba
+6411,Mateus Lusuardi,Mateus Lusuardi,D,4,Pisa,Brasile
+7170,Mbambi,Jeremy Kandje Mbambi,D,1,Pisa,Belgio
+7141,Rus,Adrian Rus,D,2,Pisa,Romania;Ungheria
+2745,Calabresi,Arturo Calabresi,D,4,Pisa,Italia
+7142,Esteves T.,Tomas Esteves,D,1,Pisa,Portogallo
+7143,Angori,Samuele Angori,D,6,Pisa,Italia
+7145,Piccinini G.,Gabriele Piccinini,C,6,Pisa,Italia
+7146,Tourè I.,Idrissa Tourè,C,7,Pisa,Germania;Guinea
+7147,Hojholt,Malthe Hojholt,C,1,Pisa,Danimarca
+7149,Marin M.,Marius Marin,C,6,Pisa,Romania
+7150,Vural,Isak Vural,C,3,Pisa,Turchia;Svezia
+6593,Akinsanmiro,Ebenezer Akinsanmiro,C,4,Pisa,Nigeria
+2334,Leris,Mehdi Leris,C,2,Pisa,Francia;Algeria
+7151,Arena,Alessandro Arena,C,1,Pisa,Italia
+5318,Tramoni M.,Matteo Tramoni,C,12,Pisa,Francia
+7171,Buffon L.,Louis Buffon,A,1,Pisa,Italia;Repubblica Ceca
+5455,Moreo,Stefano Moreo,A,6,Pisa,Italia
+7152,Bonfanti N.,Nicholas Bonfanti,A,1,Pisa,Italia
+7153,Lind,Alexander Lind,A,4,Pisa,Danimarca
+6836,Meister,Henrik Meister,A,3,Pisa,Danimarca
+7169,Zelezny,Radoslav Zelezny,P,1,Roma,Polonia
+610,Gollini,Pierluigi Gollini,P,1,Roma,Italia
+5841,Svilar,Mile Svilar,P,15,Roma,Serbia;Belgio
+4807,Hermoso,Mario Hermoso,D,4,Roma,Spagna
+4495,Kumbulla,Marash Kumbulla,D,2,Roma,Albania;Italia
+2296,Mancini,Gianluca Mancini,D,11,Roma,Italia
+4317,N'Dicka,Evan N'Dicka,D,10,Roma,Francia;Camerun
+4657,Celik,Zeki Celik,D,7,Roma,Turchia
+6986,Rensch,Devyne Rensch,D,5,Roma,Olanda;Suriname
+6885,Abdulhamid,Saud Abdulhamid,D,1,Roma,Arabia Saudita
+7020,Salah-Eddine,Anass Salah-Eddine,D,4,Roma,Olanda;Marocco
+4772,Angelino,Angelino,D,15,Roma,Spagna
+7181,Wesley,Wesley,D,15,Roma,Brasile
+779,Cristante,Bryan Cristante,C,9,Roma,Italia;Canada
+6271,El Aynaoui,Neil El Aynaoui,C,9,Roma,Francia;Marocco
+5589,Konè M.,Manu Kouadio Konè,C,14,Roma,Francia;Costa d''Avorio
+6190,Pisilli,Niccolò Pisilli,C,7,Roma,Italia
+530,Pellegrini Lo.,Lorenzo Pellegrini,C,11,Roma,Italia
+795,El Shaarawy,Stephan El Shaarawy,C,8,Roma,Italia;Egitto
+5823,Baldanzi,Tommaso Baldanzi,C,8,Roma,Italia
+5734,Soulè,Matias Soulè,A,19,Roma,Argentina;Italia
+309,Dybala,Paulo Dybala,A,26,Roma,Argentina;Italia
+6675,Dovbyk,Artem Dovbyk,A,20,Roma,Ucraina
+6365,Ferguson E.,Evan Ferguson,A,19,Roma,Irlanda
+4518,Russo A.,Alessandro Russo,P,1,Sassuolo,Italia
+2127,Satalino,Giacomo Satalino,P,1,Sassuolo,Italia
+4867,Turati,Stefano Turati,P,7,Sassuolo,Italia
+7155,Muharemovic,Tarik Muharemovic,D,5,Sassuolo,Bosnia Erzegovina; Slovenia
+7154,Odenthal,Cas Odenthal,D,3,Sassuolo,Olanda
+2279,Romagna,Filippo Romagna,D,4,Sassuolo,Italia
+4374,Walukiewicz,Sebastian Walukiewicz,D,5,Sassuolo,Polonia
+6189,Missori,Filippo Missori,D,2,Sassuolo,Italia
+6431,Paz Y.,Yeferson Paz,D,1,Sassuolo,Colombia
+5851,Doig,Josh Doig,D,6,Sassuolo,Scozia
+7156,Pieragnolo,Edoardo Pieragnolo,D,2,Sassuolo,Italia
+6219,Boloca,Daniel Boloca,C,6,Sassuolo,Romania;Italia
+4930,Ghion,Andrea Ghion,C,4,Sassuolo,Italia
+6717,Konè I.,Ismael Konè,C,5,Sassuolo,Canada;Costa d''Avorio
+6246,Lipani,Luca Lipani,C,4,Sassuolo,Italia
+7157,Iannoni,Edoardo Iannoni,C,1,Sassuolo,Italia
+5844,Thorstvedt,Kristian Thorstvedt,C,8,Sassuolo,Norvegia
+6815,Fadera,Alieu Fadera,C,6,Sassuolo,Gambia
+5735,Volpato,Cristian Volpato,C,5,Sassuolo,Italia;Australia
+1842,Pierini,Nicholas Pierini,A,5,Sassuolo,Italia
+531,Berardi,Domenico Berardi,A,20,Sassuolo,Italia
+6060,Laurientè,Armand Laurientè,A,15,Sassuolo,Francia;Guadalupa
+5845,Alvarez A.,Agustin Alvarez,A,2,Sassuolo,Uruguay
+7158,Moro L.,Luca Moro,A,1,Sassuolo,Italia
+6205,Mulattieri,Samuele Mulattieri,A,5,Sassuolo,Italia
+2038,Pinamonti,Andrea Pinamonti,A,15,Sassuolo,Italia
+7159,Skjellerup,Laurs Skjellerup,A,1,Sassuolo,Danimarca
+216,Donnarumma An.,Antonio Donnarumma,P,1,Torino,Italia
+7179,Israel,Franco Israel,P,8,Torino,Uruguay;Italia
+5320,Paleari,Alberto Paleari,P,1,Torino,Italia
+6210,Popa,Mihai Popa,P,1,Torino,Romania
+6642,Coco,Saul Coco,D,8,Torino,Guinea Equatoriale;Spagna
+5010,Ismajli,Ardian Ismajli,D,8,Torino,Albania;Kosovo
+4665,Maripan,Guillermo Maripan,D,7,Torino,Cile
+6041,Schuurs,Perr Schuurs,D,3,Torino,Olanda
+49,Masina,Adam Masina,D,3,Torino,Italia;Marocco
+6826,Dembelè A.,Ali Dembelè,D,1,Torino,Francia;Mali
+4385,Lazaro,Valentino Lazaro,D,7,Torino,Austria
+6426,Pedersen,Marcus Pedersen,D,4,Torino,Norvegia
+252,Biraghi,Cristiano Biraghi,D,8,Torino,Italia
+4890,Tameze,Adrien Tameze,C,5,Torino,Francia;Camerun
+6170,Gineitis,Gvidas Gineitis,C,4,Torino,Lituania
+5007,Ilic,Ivan Ilic,C,7,Torino,Serbia
+5888,Casadei,Cesare Casadei,C,12,Torino,Italia
+6889,Anjorin,Faustino Anjorin,C,10,Torino,Inghilterra;Nigeria
+5687,Vlasic,Nikola Vlasic,C,15,Torino,Croazia
+6145,Ngonge,Cyril Ngonge,A,9,Torino,Belgio;Repubblica Democratica del Congo
+6646,Adams C.,Che Adams,A,14,Torino,Scozia;Inghilterra
+6827,Njie,Alieu Njie,A,1,Torino,Svezia:Gambia
+479,Sanabria,Antonio Sanabria,A,7,Cremonese,Paraguay;Spagna
+608,Zapata D.,Duvan Zapata,A,20,Torino,Colombia
+6462,Okoye,Maduka Okoye,P,6,Udinese,Nigeria;Germania
+543,Padelli,Daniele Padelli,P,1,Udinese,Italia
+6842,Sava,Razvan Sava,P,4,Udinese,Romania
+5820,Bertola,Nicolò Bertola,D,6,Udinese,Italia
+6533,Giannetti L.,Lautaro Giannetti,D,3,Udinese,Argentina;Italia
+4263,Kabasele,Christian Kabasele,D,3,Udinese,Belgio;Repubblica Democratica del Congo
+6925,Palma,Matteo Palma,D,1,Udinese,Germania;Italia
+6956,Solet,Oumar Solet,D,11,Udinese,Francia;Repubblica Centrafricana
+6485,Kristensen T.,Thomas Kristensen,D,7,Udinese,Danimarca
+6047,Ehizibue,Kingsley Ehizibue,D,5,Udinese,Nigeria;Olanda
+5555,Kamara H.,Hassane Kamara,D,7,Udinese,Francia;Gambia
+6211,Zemura,Jordan Zemura,D,3,Udinese,Zimbabwe;Inghilterra
+6900,Rui Modesto,Rui Modesto,D,3,Udinese,Angola;Portogallo
+6680,Karlstrom,Jesper Karlstrom,C,6,Udinese,Svezia
+6212,Zarraga,Oier Zarraga,C,3,Udinese,Spagna
+6908,Atta,Arthur Atta,C,7,Udinese,Francia;Benin
+5850,Lovric,Sandi Lovric,C,10,Udinese,Slovenia;Austria
+6481,Payero,Martin Payero,C,4,Cremonese,Argentina;Italia
+6684,Ekkelenkamp,Jurgen Ekkelenkamp,C,10,Udinese,Olanda
+5824,Pafundi,Simone Pafundi,C,1,Udinese,Italia
+6653,Bravo,Iker Bravo,A,6,Udinese,Spagna
+6213,Brenner,Brenner,A,3,Udinese,Brasile
+2475,Sanchez,Alexis Sanchez,A,7,Udinese,Cile
+2369,Thauvin,Florian Thauvin,A,16,Udinese,Francia
+7161,Bayo V.,Vakoun Bayo,A,4,Udinese,Costa d''Avorio
+5637,Davis K.,Keinan Davis,A,11,Udinese,Inghilterra
+6635,Pizarro,Damian Pizarro,A,1,Udinese,Cile
+4957,Montipò,Lorenzo Montipò,P,5,Verona,Italia
+511,Perilli,Simone Perilli,P,1,Verona,Italia
+6631,Ghilardi,Daniele Ghilardi,D,4,Roma,Italia
+7011,Slotsager,Tobias Slotsager,D,2,Verona,Danimarca
+6894,Unai Nunez,Unai Nunez,D,5,Verona,Spagna
+6957,Valentini N.,Nicolas Valentini,D,4,Verona,Argentina;Italia
+5994,Ebosse,Enzo Ebosse,D,4,Verona,Camerun;Francia
+6992,Oyegoke,Daniel Oyegoke,D,2,Verona,Inghilterra;Nigeria
+6480,Tchatchoua,Jackson Tchatchoua,D,8,Verona,Belgio;Camerun
+6639,Frese,Martin Frese,D,3,Verona,Danimarca
+5540,Niasse,Cheikh Niasse,C,3,Verona,Francia;Senegal
+7028,Bernede,Antoine Bernede,C,4,Verona,Francia;Camerun
+7177,Santiago,Yellu Santiago,C,2,Verona,Spagna
+6458,Serdar,Suat Serdar,C,7,Verona,Germania;Turchia
+2117,Kastanos,Grigoris Kastanos,C,4,Verona,Cipro
+6618,Cissè A.,Alphadjo Cissè,C,1,Verona,Italia;Guinea
+5688,Harroui,Abdou Harroui,C,7,Verona,Olanda;Marocco
+6486,Suslov,Tomas Suslov,C,9,Verona,Slovacchia
+7162,Giovane,Giovane,A,3,Verona,Brasile
+6159,Sarr A.,Amin Sarr,A,8,Verona,Svezia;Senegal
+6630,Mosquera,Daniel Mosquera,A,6,Verona,Colombia
+6644,Rocha Livramento,Dailon Rocha Livramento,A,3,Verona,Capo Verde;Olanda
+6125,Vasquez D.,Devis Vasquez,P,1,Roma,Colombia
+5750,Ostigard,Ostigard Leo,D,5,Genoa,Norvegia
+7183,Aboukhlal,Zakaria Aboukhlal,A,9,Torino,Marocco;Olanda
+7185,Nunziante,Alessandro Nunziante,P,1,Udinese,Italia
+1976,Mazzitelli,Luca Mazzitelli,C,5,Cagliari,Italia
+6869,Ramon,Jacobo Ramon,D,5,Como,Spagna
+158,Lezzerini,Luca Lezzerini,P,1,Fiorentina,Italia
+7196,Denoon,Daniel Denoon,D,2,Pisa,Svizzera
+7198,Piotrowski,Jakub Piotrowski,C,6,Udinese,Polonia
+7199,Kilicsoy,Semih Kilicsoy,A,6,Cagliari,Turchia
+5532,Bradaric,Bradaric Domagoj,D,4,Verona,Croazia
+7202,Ndiaye,Abdoulaye Ndiaye,D,4,Parma,Senegal
+6537,Goglichidze,Saba Goglichidze,D,4,Udinese,Georgia
+7203,Jashari,Ardon Jashari,C,13,Milan,Svizzera;Macedonia del Nord
+697,Cuadrado,Juan Cuadrado,D,7,Pisa,Colombia
+5336,Nzola,M'Bala Nzola,A,12,Pisa,Francia;Angola
+6672,Idzes,Jay Idzes,D,7,Sassuolo,Indonesia;Olanda
+2839,Sottil,Riccardo Sottil,C,11,Lecce,Italia
+6985,Candè,Fqli Candè,D,6,Sassuolo,Guinea Bissau;Portogallo
+313,Morata,Alvaro Morata,A,18,Como,Spagna
+7208,Miller L.,Lennon Miller,C,3,Udinese,Scozia
+4236,Muric,Arijanet Muric,P,3,Sassuolo,Kosovo;Montenegro
+7209,Sorensen O.,Oliver Sorensen,C,6,Parma,Danimarca
+2211,Silvestri,Marco Silvestri,P,1,Cremonese,Italia
+5324,Godfrey,Ben Godfrey,D,1,Atalanta,Inghilterra
+2076,Rog,Marko Rog,C,1,Cagliari,Croazia
+7211,Athekame,Zachary Athekame,D,6,Milan,Svizzera
+7212,Heggem,Torbjorn Heggem,D,4,Bologna,Norvegia
+7213,Frigan,Matija Frigan,A,7,Parma,Croazia
+6677,Adzic,Vasilije Adzic,C,1,Juventus,Montenegro
+6005,Ilkhan,Emirhan Ilkhan,C,1,Torino,Turchia
+7220,Belghali,Rafik Belghali,D,4,Verona,Algeria;Belgio
+7222,Cham,Fallou Cham,D,1,Verona,Gambia
+5427,Gutierrez,Miguel Gutierrez,D,8,Napoli,Spagna
+2670,Bailey,Leon Bailey,C,16,Roma,Giamaica
+7018,Nelsson,Victor Nelsson,D,5,Verona,Danimarca
+7235,Troilo,Mariano Troilo,D,6,Parma,Argentina
+7236,Toniolo,Giacomo Toniolo,P,1,Verona,Italia
+7240,Siebert,Jamil Siebert,D,5,Lecce,Germania
+6274,Diouf,Andy Diouf,C,7,Inter,Francia;Senegal
+5610,Vranckx,Aster Vranckx,C,4,Sassuolo,Belgio;Repubblica Democratica Del Congo
+7246,Sala A.,Alex Sala,C,3,Lecce,Spagna
+6844,Rowe,Jonathan Rowe,C,14,Bologna,Inghilterra
+2528,Matic,Matic Nemanja,C,4,Sassuolo,Serbia;Slovacchia
+7249,Buksa,Adam Buksa,A,9,Udinese,Polonia
+7253,Bella-Kotchap,Armel Bella-Kotchap,D,6,Verona,Germania;Camerun
+7252,Stulic,Nikola Stulic,A,13,Lecce,Serbia;Croazia
+7255,Britschgi,Sascha Britschgi,D,1,Parma,Svizzera
+6552,Orban G.,Gift Orban,A,15,Verona,Nigeria
+6218,Oristanio,Gaetano Oristanio,C,12,Parma,Italia
+5561,Stengs,Calvin Stengs,C,11,Pisa,Olanda;Suriname
