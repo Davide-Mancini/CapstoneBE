@@ -53,4 +53,9 @@ public class AuthService {
         UUID userId = jwtTools.idFromToken(token);
         return utenteService.findById(userId);
     }
+
+    //LOGOUT
+    public void logout(){
+
+    }
 }
