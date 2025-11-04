@@ -5,6 +5,7 @@ import davidemancini.CapstoneBE.exceptions.MyUnauthorizedException;
 import davidemancini.CapstoneBE.services.UtenteService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,12 +32,24 @@ public class JWTFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         String header = request.getHeader("Authorization");
-        if (header==null||!header.startsWith("Bearer ")){
-            throw new MyUnauthorizedException("Inserire token valido!");
+        String token = null;
+        if (header!=null&&header.startsWith("Bearer ")){
+        token= header.replace("Bearer ", "");
         }
-        String token= header.replace("Bearer ", "");
-        jwtTools.verificaToken(token);
+        if (token==null&& request.getCookies()!= null){
+            for (Cookie cookie: request.getCookies()){
+                if ("jtw".equals(cookie.getName())){
+                    token=cookie.getValue();
+                    break;
+                }
+            }
+        }
+        if (token==null){
+            filterChain.doFilter(request,response);
+            return;
+        }
 
+        jwtTools.verificaToken(token);
         UUID utenteId = jwtTools.idFromToken(token);
         Utenti trovato = utenteService.findById(utenteId);
         Authentication authentication = new UsernamePasswordAuthenticationToken(trovato,null,trovato.getAuthorities());

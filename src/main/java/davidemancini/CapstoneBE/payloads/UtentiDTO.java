@@ -15,7 +15,7 @@ public record UtentiDTO(
         String email,
         @NotBlank(message = "Password obbligatoria!")
         @Size(min = 6, message = "La password deve avere almeno 6 caratteri")
-        @Pattern(regexp = "^(?=.*[A-Z])(?=.*\\d).{6,}$\n", message = "La password deve avere: •Almeno una lettera maiuscola •Almeno una lettera minuscola  •Lunghezza di almeno 6 caratteri")
+        @Pattern(regexp = "(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{6,}", message = "La password deve avere: •Almeno una lettera maiuscola •Almeno una lettera minuscola •Lunghezza di almeno 6 caratteri")
         String password,
         @NotBlank(message = "Username obbligatorio!")
         @Size(min = 3, max = 20, message = "L'username deve avere minimo 3 caratteri e massimo 20")
