@@ -34,8 +34,8 @@ public class UtenteService {
         if (utenteRepository.existsByUsername(body.username())){
             throw new MyAlreadyExistingException("L'username " + body.username() + " è già in uso");
         }
-        TipoUtente found = tipoUtenteRepository.findByTipo(body.tipoUtente()).orElseThrow(()->new MyNotFoundException("Tipo di utente" +body.tipoUtente()+" non trovato"));
-        Utenti newUtente = new Utenti(body.nome(), body.cognome(), body.email(),bCrypt.encode(body.password()) , body.username(),found );
+        TipoUtente user = tipoUtenteRepository.findByTipo("USER").orElseThrow(()->new MyNotFoundException( "Tipo utente non trovato"));
+        Utenti newUtente = new Utenti(body.nome(), body.cognome(), body.email(),bCrypt.encode(body.password()) , body.username(),user );
         return utenteRepository.save(newUtente);
     }
 
