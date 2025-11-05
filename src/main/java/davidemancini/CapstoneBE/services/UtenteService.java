@@ -1,8 +1,11 @@
 package davidemancini.CapstoneBE.services;
 
+import com.cloudinary.Cloudinary;
+import com.cloudinary.utils.ObjectUtils;
 import davidemancini.CapstoneBE.entities.TipoUtente;
 import davidemancini.CapstoneBE.entities.Utenti;
 import davidemancini.CapstoneBE.exceptions.MyAlreadyExistingException;
+import davidemancini.CapstoneBE.exceptions.MyBadRequest;
 import davidemancini.CapstoneBE.exceptions.MyNotFoundException;
 import davidemancini.CapstoneBE.payloads.UtentiDTO;
 import davidemancini.CapstoneBE.repositories.TipoUtenteRepository;
@@ -10,7 +13,11 @@ import davidemancini.CapstoneBE.repositories.UtenteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
+import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 @Service
@@ -25,6 +32,11 @@ public class UtenteService {
     @Autowired
     private PasswordEncoder bCrypt;
 
+    @Autowired
+    private Cloudinary uploader;
+
+    private long MAX_SIZE = 5 * 1024 * 1024;
+    private List<String> ALLOWED_TYPES = List.of("image/png", "image/jpeg");
 
     public Utenti save(UtentiDTO body){
         //CONTROLLO PRIMA SE L'EMAIL E USERNAME SONO GIA REGISTRATI
@@ -45,5 +57,20 @@ public class UtenteService {
 
     public Utenti findByEmail(String email){
         return utenteRepository.findByEmail(email);
+    }
+
+    public Utenti uploadAvatar(Utenti utente, MultipartFile file){
+        if (file.isEmpty()) throw new MyBadRequest("File vuoto");
+        if (file.getSize()>MAX_SIZE) throw new MyBadRequest("File troppo grande, dimensione massima 5mb");
+        if (!ALLOWED_TYPES.contains(file.getContentType())) throw new MyBadRequest("Formato non valido (jpeg o png");
+
+        try{
+            Map risultato = uploader.uploader().upload(file.getBytes(), ObjectUtils.emptyMap());
+            String urlImg = (String) risultato.get("url");
+            utente.setAvatar(urlImg);
+        }catch (IOException ex){
+            throw new RuntimeException(ex);
+        }
+        return utenteRepository.save(utente);
     }
 }
