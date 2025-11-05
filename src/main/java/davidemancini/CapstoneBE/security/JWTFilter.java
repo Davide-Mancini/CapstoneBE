@@ -2,6 +2,7 @@ package davidemancini.CapstoneBE.security;
 
 import davidemancini.CapstoneBE.entities.Utenti;
 import davidemancini.CapstoneBE.exceptions.MyUnauthorizedException;
+import davidemancini.CapstoneBE.services.InvalidTokenList;
 import davidemancini.CapstoneBE.services.UtenteService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -28,6 +29,9 @@ public class JWTFilter extends OncePerRequestFilter {
     @Autowired
     private UtenteService utenteService;
 
+    @Autowired
+    private InvalidTokenList invalidTokenList; //
+
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
@@ -47,6 +51,11 @@ public class JWTFilter extends OncePerRequestFilter {
         if (token==null){
             filterChain.doFilter(request,response);
             return;
+        }
+
+        //AGGIUNGO METODO PER VERIFICARE CHE IL TOKEN NON SIA STATO INSERITO NELLA LISTA DEI TOKEN NON PIU VALIDI
+        if (invalidTokenList.isInvalidated(token)){
+            throw new MyUnauthorizedException("Token non valido, è stato inserito nella black list");
         }
 
         jwtTools.verificaToken(token);

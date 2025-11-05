@@ -7,10 +7,12 @@ import davidemancini.CapstoneBE.payloads.LoginDTO;
 import davidemancini.CapstoneBE.security.JWTTools;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.time.Instant;
 import java.util.UUID;
 
 @Service
@@ -24,6 +26,9 @@ public class AuthService {
 
     @Autowired
     private PasswordEncoder bCrypt;
+
+    @Autowired
+    private InvalidTokenList invalidTokenList;
 
     //QUESTO METODO FA UN CONTROLLO SULLA PASSWORD E SE TUTTO OK, GENERA UN TOKEN
     public String checkCredentialsAndGenerateToken(LoginDTO body){
@@ -55,7 +60,27 @@ public class AuthService {
     }
 
     //LOGOUT
-    public void logout(){
+    public void logout(HttpServletRequest request, HttpServletResponse response){
+        String token = null;
+        if (request.getCookies()!=null){
+            for (Cookie cookie: request.getCookies()){
+                if ("jwt".equals(cookie.getName())){
+                    token=cookie.getValue();
+                    break;
+                }
+            }
+        }
+        if (token!= null){
+            Instant scadenza = jwtTools.getScadenzaFromToken(token);
+            invalidTokenList.addToInvalidLits(token,scadenza);
+        }
+        //AGGIUNGO COME RESPONSE UN COOKIE CON SCADENZA A 0 QUINDI GIA SCADUTO
+        Cookie cookie= new Cookie("jwt",null);
+        cookie.setHttpOnly(true);
+        cookie.setSecure(false);
+        cookie.setPath("/");
+        cookie.setMaxAge(0);
+        response.addCookie(cookie);
 
     }
 }

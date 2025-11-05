@@ -55,4 +55,9 @@ public class AuthController {
     public Utenti utenteLoggato (HttpServletRequest request){
         return authService.getUserFromCooki(request);
     }
+
+    @PostMapping("/logout")
+    public void logout(HttpServletRequest request, HttpServletResponse response){
+        authService.logout(request,response);
+    }
 }

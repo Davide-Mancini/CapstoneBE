@@ -2,11 +2,14 @@ package davidemancini.CapstoneBE.security;
 
 import davidemancini.CapstoneBE.entities.Utenti;
 import davidemancini.CapstoneBE.exceptions.MyUnauthorizedException;
+import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.nio.charset.StandardCharsets;
+import java.time.Instant;
 import java.util.Date;
 import java.util.UUID;
 
@@ -33,6 +36,15 @@ public class JWTTools {
         }catch (Exception ex){
             throw new MyUnauthorizedException("Errori nel Token");
         }
+    }
+
+    public Instant getScadenzaFromToken(String token){
+        Claims claims = Jwts.parser()
+                .verifyWith(Keys.hmacShaKeyFor(segreto.getBytes(StandardCharsets.UTF_8)))
+                .build()
+                .parseSignedClaims(token)
+                .getPayload();
+        return claims.getExpiration().toInstant();
     }
 
     //METODO PER RECUPERARE ID DAL TOKEN PER USARE LO /ME
