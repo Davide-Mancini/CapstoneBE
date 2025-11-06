@@ -5,7 +5,9 @@ import davidemancini.CapstoneBE.payloads.CalciatoriDTO;
 import davidemancini.CapstoneBE.services.CalciatoriService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -39,5 +41,24 @@ public class CalciatoriController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteCalciatore(long id){
         calciatoriService.deleteCalciatore(id);
+    }
+
+    @GetMapping("/ruolo/difensori")
+    public Page<Calciatori> findDifensori(@RequestParam(defaultValue = "D") String ruolo,@RequestParam(defaultValue = "0") int pageNumber, @RequestParam(defaultValue = "10") int pageSize, @RequestParam(defaultValue = "valore") String sortBy){
+        return calciatoriService.findByRuolo(ruolo,pageNumber,pageSize,sortBy);
+    }
+
+
+    @GetMapping("/search")
+    public ResponseEntity<Page<Calciatori>> multiSearch(@RequestParam(required = false) String ruolo,
+                                                  @RequestParam(required = false)String cognome,
+                                                  @RequestParam(required = false)String squadra,
+                                                  @RequestParam(required = false)Long valore,
+                                                  @RequestParam(defaultValue = "0") int pageNumber,
+                                                  @RequestParam(defaultValue = "10") int pageSize,
+                                                  @RequestParam(defaultValue = "valore") String sortBy,
+                                                  @RequestParam(defaultValue = "desc") String direction){
+        Page<Calciatori> calciatori= calciatoriService.multiSearch(ruolo,cognome,squadra,valore,pageNumber,pageSize,sortBy,direction);
+        return ResponseEntity.ok(calciatori);
     }
 }

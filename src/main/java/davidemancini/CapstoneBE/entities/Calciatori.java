@@ -21,10 +21,11 @@ public class Calciatori {
     private int valore;
     private String squadra;
     private String nazionalita;
+    private String campioncino;
 
 
     //COSTRUTTORE
-    public Calciatori(long id,String cognome, String nome_completo, String ruolo, int valore, String squadra, String nazionalita) {
+    public Calciatori(long id,String cognome, String nome_completo, String ruolo, int valore, String squadra, String nazionalita,String campioncino) {
         this.id=id;
         this.cognome = cognome;
         this.nome_completo = nome_completo;
@@ -32,5 +33,6 @@ public class Calciatori {
         this.valore = valore;
         this.squadra = squadra;
         this.nazionalita = nazionalita;
+        this.campioncino=campioncino;
     }
 }

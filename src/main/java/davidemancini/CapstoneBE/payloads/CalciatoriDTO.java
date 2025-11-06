@@ -6,5 +6,6 @@ public record CalciatoriDTO(long id,
                             String ruolo,
                             int valore,
                             String squadra,
-                            String nazionalita ) {
+                            String nazionalita,
+                            String campioncino) {
 }

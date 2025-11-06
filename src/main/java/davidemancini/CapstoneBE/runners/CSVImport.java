@@ -64,6 +64,7 @@ public class CSVImport implements CommandLineRunner {
                         String valoreStr = parts.length > 4 ? parts[4].trim() : "";
                         String squadra = parts.length > 5 ? parts[5].trim() : "";
                         String nazionalita = parts.length > 6 ? parts[6].trim() : "";
+                        String campioncino = parts.length>7 ? parts[7].trim():"";
 
                         //VENGONO CONVERTITI ID E VALORE GIOCASTORE IN NUMERI
                         long id = parseLongSafe(idStr, 0L);
@@ -77,7 +78,8 @@ public class CSVImport implements CommandLineRunner {
                                 ruolo,
                                 valore,
                                 squadra,
-                                nazionalita
+                                nazionalita,
+                                campioncino
                         );
                     })
                     .collect(Collectors.toList());
@@ -86,7 +88,7 @@ public class CSVImport implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        String csvName = "CalciatoriFanta.csv";
+        String csvName = "CalciatoriFantaCampioncino.csv";
         List<Calciatori> lista = loadCalciatori(csvName);
         calciatoriRepository.saveAll(lista);
         System.out.println("Import completato: " + lista.size() + " giocatori salvati.");
