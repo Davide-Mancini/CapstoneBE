@@ -7,6 +7,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
@@ -31,6 +32,9 @@ public class Utenti implements UserDetails {
     @ManyToOne
     @JoinColumn(name = "tipo_id")
     private TipoUtente tipo;
+
+    @ManyToMany(mappedBy = "utenti")
+    private List<SessioneAsta> sessioni= new ArrayList<>();
 
     //COSTRUTTORE
 

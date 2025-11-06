@@ -2,6 +2,8 @@ package davidemancini.CapstoneBE.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import lombok.*;
 
 @Entity
@@ -22,6 +24,8 @@ public class Calciatori {
     private String squadra;
     private String nazionalita;
     private String campioncino;
+
+
 
 
     //COSTRUTTORE
