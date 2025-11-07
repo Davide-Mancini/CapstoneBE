@@ -10,6 +10,7 @@ import davidemancini.CapstoneBE.exceptions.MyNotFoundException;
 import davidemancini.CapstoneBE.payloads.UtentiDTO;
 import davidemancini.CapstoneBE.repositories.TipoUtenteRepository;
 import davidemancini.CapstoneBE.repositories.UtenteRepository;
+import davidemancini.CapstoneBE.tools.MailGun;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -35,6 +36,9 @@ public class UtenteService {
     @Autowired
     private Cloudinary uploader;
 
+    @Autowired
+    private MailGun mailGun;
+
     private long MAX_SIZE = 5 * 1024 * 1024;
     private List<String> ALLOWED_TYPES = List.of("image/png", "image/jpeg");
 
@@ -48,7 +52,9 @@ public class UtenteService {
         }
         TipoUtente user = tipoUtenteRepository.findByTipo("USER").orElseThrow(()->new MyNotFoundException( "Tipo utente non trovato"));
         Utenti newUtente = new Utenti(body.nome(), body.cognome(), body.email(),bCrypt.encode(body.password()) , body.username(),user );
-        return utenteRepository.save(newUtente);
+        Utenti salvato = utenteRepository.save(newUtente);
+        mailGun.sendWelcomeEmail(salvato);
+        return salvato;
     }
 
     public Utenti findById (UUID id){
