@@ -34,6 +34,8 @@ public class SessioneAstaService {
             listaUtenti.add(utenteDaAggiungere);
         }
         astaTrovata.setUtenti(listaUtenti);
+        List<SessioneAsta> listaSessioni= utenteDaAggiungere.getSessioni();
+        listaSessioni.add(astaTrovata);
         return sessioneAstaRepository.save(astaTrovata);
 
     }

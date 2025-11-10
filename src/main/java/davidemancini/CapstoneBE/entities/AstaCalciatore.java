@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -13,7 +15,6 @@ public class AstaCalciatore {
     @Setter(AccessLevel.NONE)
     private UUID id;
     private StatoAsta statoAsta;
-    private int offerta_corrente;
 
     @ManyToOne
     private SessioneAsta sessioneAsta;
@@ -21,14 +22,21 @@ public class AstaCalciatore {
     @ManyToOne
     private Utenti vincitore;
 
-    @ManyToOne
+    @OneToOne
     private Calciatori calciatore;
+
+    @OneToMany(mappedBy = "asta_calciatore")
+    private List<Offerta>offerte;
+
+    private int valoreIniziale;
+    private int offertaFinale;
+
 
     public AstaCalciatore(Calciatori calciatore, SessioneAsta sessioneAsta) {
         this.calciatore = calciatore;
         this.sessioneAsta = sessioneAsta;
-        this.offerta_corrente = 1;
         this.statoAsta= StatoAsta.APERTA;
+        this.valoreIniziale=1;
 
     }
 }

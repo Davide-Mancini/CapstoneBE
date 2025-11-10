@@ -1,6 +1,8 @@
 package davidemancini.CapstoneBE.entities;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
@@ -18,6 +20,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @ToString
 @JsonIgnoreProperties({"password"})
+
 public class Utenti implements UserDetails {
     @Id
     @GeneratedValue
@@ -35,6 +38,7 @@ public class Utenti implements UserDetails {
 
     @ManyToMany(mappedBy = "utenti")
     private List<SessioneAsta> sessioni= new ArrayList<>();
+
 
     //COSTRUTTORE
 
