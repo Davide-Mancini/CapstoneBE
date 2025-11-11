@@ -33,4 +33,13 @@ public class AstaCalciatoreService {
     public AstaCalciatore findById (UUID id){
        return astaCalciatoreRepository.findById(id).orElseThrow(()-> new MyNotFoundException("Asta con id "+ id+" non trovata"));
     }
+    public AstaCalciatore updateOfferta(UUID astaId, Integer nuovaOfferta, String offerenteUsername) {
+        AstaCalciatore asta = astaCalciatoreRepository.findById(astaId)
+                .orElseThrow(() -> new RuntimeException("Asta non trovata"));
+
+        asta.setOffertaAttuale(nuovaOfferta);
+        asta.setOfferenteUsername(offerenteUsername);
+
+        return astaCalciatoreRepository.save(asta);
+    }
 }

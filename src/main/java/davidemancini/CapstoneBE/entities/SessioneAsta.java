@@ -1,6 +1,7 @@
 package davidemancini.CapstoneBE.entities;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
@@ -16,8 +17,6 @@ import java.util.UUID;
 @Getter
 @Setter
 @NoArgsConstructor
-@ToString
-
 public class SessioneAsta {
 
     //ATTRIBUTI
@@ -37,6 +36,7 @@ public class SessioneAsta {
     private List<Utenti> utenti= new ArrayList<>();
 
     @OneToMany(mappedBy = "sessioneAsta")
+    @JsonIgnore
     private List<AstaCalciatore> astaCalciatore=new ArrayList<>();
 
     //COSTRUTTORE
@@ -53,5 +53,16 @@ public class SessioneAsta {
         this.nome_asta = nome_asta;
         this.statoAsta = statoAsta;
         this.data_creazione = LocalDateTime.now();
+    }
+
+    @Override
+    public String toString() {
+        return "SessioneAsta{" +
+                "nome_asta='" + nome_asta + '\'' +
+                ", statoAsta=" + statoAsta +
+                ", data_creazione=" + data_creazione +
+                ", num_partecipanti=" + num_partecipanti +
+                ", crediti=" + crediti +
+                '}';
     }
 }

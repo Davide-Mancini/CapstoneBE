@@ -1,14 +1,16 @@
 package davidemancini.CapstoneBE.entities;
 
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
 public class AstaCalciatore {
     @Id
     @GeneratedValue
@@ -28,15 +30,26 @@ public class AstaCalciatore {
     @OneToMany(mappedBy = "asta_calciatore")
     private List<Offerta>offerte;
 
-    private int valoreIniziale;
+    private int offertaAttuale=1;
     private int offertaFinale;
+    private String offerenteUsername;
 
 
     public AstaCalciatore(Calciatori calciatore, SessioneAsta sessioneAsta) {
         this.calciatore = calciatore;
         this.sessioneAsta = sessioneAsta;
         this.statoAsta= StatoAsta.APERTA;
-        this.valoreIniziale=1;
+    }
 
+    @Override
+    public String toString() {
+        return "AstaCalciatore{" +
+                "offertaAttuale=" + offertaAttuale +
+                ", offertaFinale=" + offertaFinale +
+                ", offerenteUsername='" + offerenteUsername + '\'' +
+                ", calciatore=" + calciatore +
+                ", sessioneAsta=" + sessioneAsta +
+                ", statoAsta=" + statoAsta +
+                '}';
     }
 }

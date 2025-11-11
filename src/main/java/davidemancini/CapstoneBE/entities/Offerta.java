@@ -11,7 +11,6 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@ToString
 @Entity
 public class Offerta {
     @Id
@@ -24,9 +23,20 @@ public class Offerta {
     @JoinColumn(name = "asta_calciatore_id")
     private AstaCalciatore asta_calciatore;
 
-    public Offerta(Utenti offerente, int valoreOfferta,AstaCalciatore astaCalciatore) {
+    public Offerta(Utenti offerente, int valoreOfferta, AstaCalciatore astaCalciatore) {
         this.utente_offerente = offerente;
         this.valoreOfferta = valoreOfferta;
-        this.asta_calciatore=astaCalciatore;
+        this.asta_calciatore = astaCalciatore;
+    }
+
+    //TO STRING PERSONALIZZATO PER EVITARE LAZILY ERROR
+
+    @Override
+    public String toString() {
+        return "Offerta{" +
+                "valoreOfferta=" + valoreOfferta +
+                ", utente_offerente=" + (utente_offerente!= null? utente_offerente.getId():null) +
+                ", asta_calciatore=" + asta_calciatore +
+                '}';
     }
 }

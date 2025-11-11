@@ -1,6 +1,7 @@
 package davidemancini.CapstoneBE.entities;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
@@ -18,7 +19,6 @@ import java.util.UUID;
 @Getter
 @Setter
 @NoArgsConstructor
-@ToString
 @JsonIgnoreProperties({"password"})
 
 public class Utenti implements UserDetails {
@@ -37,6 +37,7 @@ public class Utenti implements UserDetails {
     private TipoUtente tipo;
 
     @ManyToMany(mappedBy = "utenti")
+    @JsonIgnore
     private List<SessioneAsta> sessioni= new ArrayList<>();
 
 
@@ -56,5 +57,18 @@ public class Utenti implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(tipo.getTipo()));
+    }
+
+    @Override
+    public String toString() {
+        return "Utenti{" +
+                "nome='" + nome + '\'' +
+                ", cognome='" + cognome + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", username='" + username + '\'' +
+                ", avatar='" + avatar + '\'' +
+                ", tipo=" + tipo +
+                '}';
     }
 }
