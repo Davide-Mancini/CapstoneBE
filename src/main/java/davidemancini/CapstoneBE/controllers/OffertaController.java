@@ -14,6 +14,7 @@ import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Controller
@@ -41,7 +42,8 @@ public class OffertaController {
             return new OffertaResponseDTO(
                     nueOfferta.getValoreOfferta(),
                     nueOfferta.getUtente_offerente().getUsername(),
-                    body.asta()
+                    body.asta(),
+                    astaAggiornata.getDataInizio()
             );
 
         } catch (Exception e) {
@@ -83,7 +85,9 @@ public class OffertaController {
                 nuovaAsta.getId(),
                 nuovaAsta.getCalciatore().getNome_completo(),
                 nuovaAsta.getCalciatore().getCampioncino(),
-                nuovaAsta.getOffertaAttuale()
+                nuovaAsta.getOffertaAttuale(),
+                nuovaAsta.getDataInizio(),
+                nuovaAsta.getDurataSecondi()
         );
     }
 }

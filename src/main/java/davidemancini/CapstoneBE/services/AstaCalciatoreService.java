@@ -9,6 +9,7 @@ import davidemancini.CapstoneBE.repositories.AstaCalciatoreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Service
@@ -23,22 +24,24 @@ public class AstaCalciatoreService {
     private SessioneAstaService sessioneAstaService;
 
 
-    public AstaCalciatore save (AstaCalciatoreDTO body){
+    public AstaCalciatore save(AstaCalciatoreDTO body) {
         Calciatori calciatore = calciatoriService.findById(body.calciatore());
         SessioneAsta sessioneAsta = sessioneAstaService.findById(body.asta());
-        AstaCalciatore nuovaAstaCalciatore = new AstaCalciatore(calciatore,sessioneAsta);
-       return astaCalciatoreRepository.save(nuovaAstaCalciatore);
+        AstaCalciatore nuovaAstaCalciatore = new AstaCalciatore(calciatore, sessioneAsta);
+        return astaCalciatoreRepository.save(nuovaAstaCalciatore);
     }
 
-    public AstaCalciatore findById (UUID id){
-       return astaCalciatoreRepository.findById(id).orElseThrow(()-> new MyNotFoundException("Asta con id "+ id+" non trovata"));
+    public AstaCalciatore findById(UUID id) {
+        return astaCalciatoreRepository.findById(id).orElseThrow(() -> new MyNotFoundException("Asta con id " + id + " non trovata"));
     }
+
     public AstaCalciatore updateOfferta(UUID astaId, Integer nuovaOfferta, String offerenteUsername) {
         AstaCalciatore asta = astaCalciatoreRepository.findById(astaId)
                 .orElseThrow(() -> new RuntimeException("Asta non trovata"));
 
         asta.setOffertaAttuale(nuovaOfferta);
         asta.setOfferenteUsername(offerenteUsername);
+        asta.setDataInizio(LocalDateTime.now());
 
         return astaCalciatoreRepository.save(asta);
     }
