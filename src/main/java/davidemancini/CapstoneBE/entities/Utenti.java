@@ -38,8 +38,11 @@ public class Utenti implements UserDetails {
 
     @ManyToMany(mappedBy = "utenti")
     @JsonIgnore
-    private List<SessioneAsta> sessioni= new ArrayList<>();
+    private List<SessioneAsta> sessioni = new ArrayList<>();
 
+    @OneToOne(mappedBy = "utenti")
+    @JsonIgnore
+    private RosaUtente rosa;
 
     //COSTRUTTORE
 

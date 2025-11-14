@@ -45,4 +45,9 @@ public class AstaCalciatoreService {
 
         return astaCalciatoreRepository.save(asta);
     }
+
+    public AstaCalciatore findByIdWithOfferte(UUID id) {
+        return astaCalciatoreRepository.findByIdWithOfferte(id)
+                .orElseThrow(() -> new MyNotFoundException("Asta con id " + id + " non trovata"));
+    }
 }

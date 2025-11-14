@@ -1,6 +1,6 @@
 package davidemancini.CapstoneBE.repositories;
 
-import davidemancini.CapstoneBE.entities.AstaCalciatore;
+import davidemancini.CapstoneBE.entities.RosaUtente;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -10,7 +10,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Repository
-public interface AstaCalciatoreRepository extends JpaRepository<AstaCalciatore, UUID> {
-    @Query("SELECT a FROM AstaCalciatore a LEFT JOIN FETCH a.offerte WHERE a.id = :id")
-    Optional<AstaCalciatore> findByIdWithOfferte(@Param("id") UUID id);
+public interface RosaUtenteRepository extends JpaRepository<RosaUtente, UUID> {
+    @Query("SELECT r FROM RosaUtente r LEFT JOIN FETCH r.caselle WHERE r.utenti.id = :utenteId")
+    Optional<RosaUtente> findByUtenteIdWithCaselle(@Param("utenteId") UUID utenteId);
 }

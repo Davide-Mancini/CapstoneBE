@@ -1,5 +1,5 @@
 package davidemancini.CapstoneBE.entities;
 
 public enum StatoAsta {
-    APERTA,CHIUSA
+    APERTA, CHIUSA, SENZA_OFFERTE
 }

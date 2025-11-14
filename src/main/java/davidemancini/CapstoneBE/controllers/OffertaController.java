@@ -2,9 +2,11 @@ package davidemancini.CapstoneBE.controllers;
 
 import davidemancini.CapstoneBE.entities.AstaCalciatore;
 import davidemancini.CapstoneBE.entities.Offerta;
+import davidemancini.CapstoneBE.entities.StatoAsta;
 import davidemancini.CapstoneBE.payloads.*;
 import davidemancini.CapstoneBE.services.AstaCalciatoreService;
 import davidemancini.CapstoneBE.services.OffertaService;
+import davidemancini.CapstoneBE.services.RosaUtenteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
@@ -15,6 +17,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.time.LocalDateTime;
+import java.util.Map;
 import java.util.UUID;
 
 @Controller
@@ -23,6 +26,8 @@ public class OffertaController {
     private OffertaService offertaService;
     @Autowired
     private AstaCalciatoreService astaCalciatoreService;
+    @Autowired
+    private RosaUtenteService rosaUtenteService;
 
     @MessageMapping("/inviaofferta/{idAsta}")
     @SendTo("/topic/public/{idAsta}")
@@ -89,5 +94,22 @@ public class OffertaController {
                 nuovaAsta.getDataInizio(),
                 nuovaAsta.getDurataSecondi()
         );
+    }
+
+    @MessageMapping("/termina-asta/{astaId}")
+    @SendTo("/topic/asta-terminata/{astaId}")
+    public AstaTerminataDTO terminaAsta(
+            @DestinationVariable UUID astaId) {
+
+        System.out.println("Richiesta chiusura asta: " + astaId);
+
+        AstaCalciatore asta = astaCalciatoreService.findByIdWithOfferte(astaId);
+
+        if (!asta.getStatoAsta().equals(StatoAsta.APERTA)) {
+            return new AstaTerminataDTO("Asta già chiusa", "Sistema", 0, "");
+        }
+        AstaTerminataDTO result = rosaUtenteService.terminaAsta(asta);
+        System.out.println("RISULTATO TERMINA ASTA: " + result);
+        return result;
     }
 }

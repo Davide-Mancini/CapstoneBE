@@ -1,9 +1,12 @@
 package davidemancini.CapstoneBE.services;
 
+import davidemancini.CapstoneBE.entities.CasellaRosa;
+import davidemancini.CapstoneBE.entities.RosaUtente;
 import davidemancini.CapstoneBE.entities.SessioneAsta;
 import davidemancini.CapstoneBE.entities.Utenti;
 import davidemancini.CapstoneBE.exceptions.MyNotFoundException;
 import davidemancini.CapstoneBE.payloads.SessioneAstaDTO;
+import davidemancini.CapstoneBE.repositories.RosaUtenteRepository;
 import davidemancini.CapstoneBE.repositories.SessioneAstaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,28 +22,45 @@ public class SessioneAstaService {
     @Autowired
     private UtenteService utenteService;
 
-    public SessioneAsta create (SessioneAstaDTO body){
-        SessioneAsta newAsta = new SessioneAsta(body.nomeAsta(),body.numPartecipanti(), body.crediti());
+    @Autowired
+    private RosaUtenteRepository rosaUtenteRepository;
+
+    public SessioneAsta create(SessioneAstaDTO body) {
+        SessioneAsta newAsta = new SessioneAsta(body.nomeAsta(), body.numPartecipanti(), body.crediti());
         return sessioneAstaRepository.save(newAsta);
     }
 
-    public SessioneAsta addUtente (UUID idAsta, UUID idUtente){
-        SessioneAsta astaTrovata = sessioneAstaRepository.findById(idAsta).orElseThrow(()->new MyNotFoundException("Sessione asta con id " +idAsta+ " non trovata" ));
+    public SessioneAsta addUtente(UUID idAsta, UUID idUtente) {
+        SessioneAsta astaTrovata = sessioneAstaRepository.findById(idAsta).orElseThrow(() -> new MyNotFoundException("Sessione asta con id " + idAsta + " non trovata"));
         Utenti utenteDaAggiungere = utenteService.findById(idUtente);
         //RECUPERO LISTA DI UTENTI DALL'ASTA TROVATA
         List<Utenti> listaUtenti = astaTrovata.getUtenti();
         //CONTROLLO SE NELLA LISTA DI QUELL'ASTA C'è GIA L'UTENTE DA AGGIUNGERE'
-        if (!listaUtenti.contains(utenteDaAggiungere)){
+        if (!listaUtenti.contains(utenteDaAggiungere)) {
             listaUtenti.add(utenteDaAggiungere);
         }
         astaTrovata.setUtenti(listaUtenti);
-        List<SessioneAsta> listaSessioni= utenteDaAggiungere.getSessioni();
+        List<SessioneAsta> listaSessioni = utenteDaAggiungere.getSessioni();
         listaSessioni.add(astaTrovata);
-        return sessioneAstaRepository.save(astaTrovata);
+        if (utenteDaAggiungere.getRosa() == null) {
+            RosaUtente nuovaRosa = new RosaUtente();
+            nuovaRosa.setUtenti(utenteDaAggiungere);
+            nuovaRosa.setCreditiResidui(300); // o il valore che usi
 
+            // Crea le 25 caselle
+            for (int i = 1; i <= 3; i++) nuovaRosa.getCaselle().add(new CasellaRosa("P", i));
+            for (int i = 1; i <= 8; i++) nuovaRosa.getCaselle().add(new CasellaRosa("D", i));
+            for (int i = 1; i <= 8; i++) nuovaRosa.getCaselle().add(new CasellaRosa("C", i));
+            for (int i = 1; i <= 6; i++) nuovaRosa.getCaselle().add(new CasellaRosa("A", i));
+
+            rosaUtenteRepository.save(nuovaRosa);
+            utenteDaAggiungere.setRosa(nuovaRosa);
+        }
+        return sessioneAstaRepository.save(astaTrovata);
     }
 
-    public SessioneAsta findById(UUID id){
-        return sessioneAstaRepository.findById(id).orElseThrow(()->new MyNotFoundException("Asta con id "+ id+" non trovata"));
+
+    public SessioneAsta findById(UUID id) {
+        return sessioneAstaRepository.findById(id).orElseThrow(() -> new MyNotFoundException("Asta con id " + id + " non trovata"));
     }
 }
