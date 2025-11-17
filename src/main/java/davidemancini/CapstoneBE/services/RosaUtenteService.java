@@ -75,7 +75,9 @@ public class RosaUtenteService {
                 vincitore.getUsername(),
                 prezzo,
                 calciatore.getRuolo()
+
         );
+        
 
     }
 }

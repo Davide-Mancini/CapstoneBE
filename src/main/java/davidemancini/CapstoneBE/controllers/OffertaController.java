@@ -109,9 +109,9 @@ public class OffertaController {
         if (!asta.getStatoAsta().equals(StatoAsta.APERTA)) {
             return new AstaTerminataDTO("Asta già chiusa", "Sistema", 0, "");
         }
+       
         AstaTerminataDTO result = rosaUtenteService.terminaAsta(asta);
         System.out.println("RISULTATO TERMINA ASTA: " + result);
-        asta.setStatoAsta(StatoAsta.CHIUSA);
         return result;
     }
 }

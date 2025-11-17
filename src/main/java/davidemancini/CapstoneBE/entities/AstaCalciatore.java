@@ -17,6 +17,7 @@ public class AstaCalciatore {
     @GeneratedValue
     @Setter(AccessLevel.NONE)
     private UUID id;
+    @Enumerated(EnumType.STRING)
     private StatoAsta statoAsta;
 
     @ManyToOne
