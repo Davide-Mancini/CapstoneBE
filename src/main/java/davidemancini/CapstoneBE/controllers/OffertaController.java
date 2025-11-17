@@ -92,7 +92,8 @@ public class OffertaController {
                 nuovaAsta.getCalciatore().getCampioncino(),
                 nuovaAsta.getOffertaAttuale(),
                 nuovaAsta.getDataInizio(),
-                nuovaAsta.getDurataSecondi()
+                nuovaAsta.getDurataSecondi(),
+                nuovaAsta.getStatoAsta()
         );
     }
 
@@ -110,6 +111,7 @@ public class OffertaController {
         }
         AstaTerminataDTO result = rosaUtenteService.terminaAsta(asta);
         System.out.println("RISULTATO TERMINA ASTA: " + result);
+        asta.setStatoAsta(StatoAsta.CHIUSA);
         return result;
     }
 }

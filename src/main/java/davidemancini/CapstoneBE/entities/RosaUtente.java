@@ -21,6 +21,7 @@ public class RosaUtente {
     private UUID id;
 
     @OneToOne
+    @JsonIgnore
     private Utenti utenti;
 
     private int creditiResidui;

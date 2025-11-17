@@ -48,7 +48,7 @@ public class RosaUtenteService {
         if (vincitrice == null) {
             astaCalciatore.setStatoAsta(StatoAsta.SENZA_OFFERTE);
             astaCalciatoreRepository.save(astaCalciatore);
-
+            return new AstaTerminataDTO("Nessuna offerta", "Nessun vincitore", 0, "");
         }
         Utenti vincitore = vincitrice.getUtente_offerente();
         Calciatori calciatore = astaCalciatore.getCalciatore();
@@ -71,7 +71,7 @@ public class RosaUtenteService {
         astaCalciatoreRepository.save(astaCalciatore);
 
         return new AstaTerminataDTO(
-                calciatore.getNome_completo(),
+                calciatore.getCognome(),
                 vincitore.getUsername(),
                 prezzo,
                 calciatore.getRuolo()

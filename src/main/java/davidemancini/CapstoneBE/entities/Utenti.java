@@ -41,7 +41,7 @@ public class Utenti implements UserDetails {
     private List<SessioneAsta> sessioni = new ArrayList<>();
 
     @OneToOne(mappedBy = "utenti")
-    @JsonIgnore
+   
     private RosaUtente rosa;
 
     //COSTRUTTORE
