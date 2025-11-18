@@ -26,11 +26,17 @@ public class RosaUtente {
 
     private int creditiResidui;
 
-    @OneToMany(mappedBy = "rosa")
+    @OneToMany(mappedBy = "rosa", cascade = CascadeType.ALL)
     @JsonIgnore
     private List<CasellaRosa> caselle = new ArrayList<>();
 
     public RosaUtente(Utenti utenti) {
         this.utenti = utenti;
     }
+
+    public void addCasella(CasellaRosa casella) {
+        casella.setRosa(this);
+        this.caselle.add(casella);
+    }
+
 }

@@ -107,7 +107,7 @@ public class OffertaController {
         AstaCalciatore asta = astaCalciatoreService.findByIdWithOfferte(astaId);
 
         if (!asta.getStatoAsta().equals(StatoAsta.APERTA)) {
-            return new AstaTerminataDTO("Asta già chiusa", "Sistema", 0, "");
+            return new AstaTerminataDTO("Asta già chiusa", "Sistema", 0, "", 0);
         }
        
         AstaTerminataDTO result = rosaUtenteService.terminaAsta(asta);

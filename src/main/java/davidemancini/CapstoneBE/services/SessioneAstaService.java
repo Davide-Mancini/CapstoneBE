@@ -48,10 +48,26 @@ public class SessioneAstaService {
             nuovaRosa.setCreditiResidui(300); // o il valore che usi
 
             // Crea le 25 caselle
-            for (int i = 1; i <= 3; i++) nuovaRosa.getCaselle().add(new CasellaRosa("P", i));
-            for (int i = 1; i <= 8; i++) nuovaRosa.getCaselle().add(new CasellaRosa("D", i));
-            for (int i = 1; i <= 8; i++) nuovaRosa.getCaselle().add(new CasellaRosa("C", i));
-            for (int i = 1; i <= 6; i++) nuovaRosa.getCaselle().add(new CasellaRosa("A", i));
+            for (int i = 1; i <= 3; i++) {
+                CasellaRosa c = new CasellaRosa("P", i);
+                c.setRosa(nuovaRosa);
+                nuovaRosa.getCaselle().add(c);
+            }
+            for (int i = 1; i <= 8; i++) {
+                CasellaRosa c = new CasellaRosa("D", i);
+                c.setRosa(nuovaRosa);
+                nuovaRosa.getCaselle().add(c);
+            }
+            for (int i = 1; i <= 8; i++) {
+                CasellaRosa c = new CasellaRosa("C", i);
+                c.setRosa(nuovaRosa);
+                nuovaRosa.getCaselle().add(c);
+            }
+            for (int i = 1; i <= 6; i++) {
+                CasellaRosa c = new CasellaRosa("A", i);
+                c.setRosa(nuovaRosa);
+                nuovaRosa.getCaselle().add(c);
+            }
 
             rosaUtenteRepository.save(nuovaRosa);
             utenteDaAggiungere.setRosa(nuovaRosa);
