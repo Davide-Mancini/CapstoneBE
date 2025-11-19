@@ -1,9 +1,6 @@
 package davidemancini.CapstoneBE.entities;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.annotation.*;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
@@ -37,11 +34,11 @@ public class Utenti implements UserDetails {
     private TipoUtente tipo;
 
     @ManyToMany(mappedBy = "utenti")
-    @JsonIgnore
+    @JsonBackReference
     private List<SessioneAsta> sessioni = new ArrayList<>();
 
     @OneToOne(mappedBy = "utenti")
-   
+
     private RosaUtente rosa;
 
     //COSTRUTTORE
