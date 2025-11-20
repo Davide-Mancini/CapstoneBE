@@ -73,7 +73,7 @@ public class RosaUtenteService {
         Calciatori calciatore = astaCalciatore.getCalciatore();
         int prezzo = vincitrice.getValoreOfferta();
         SessioneAsta trovata = sessioneAstaService.findById(astaCalciatore.getSessioneAsta().getId());
-        RosaUtente rosa = rosaUtenteRepository.findByUtenteIdAndSessioneAstaIdWithCaselle(vincitore.getId(), trovata.getId())
+        RosaUtente rosa = rosaUtenteRepository.findByUtentiIdAndSessioneAstaIdWithCaselle(vincitore.getId(), trovata.getId())
                 .orElseThrow(() -> new RuntimeException("Rosa non trovata per utente " + vincitore.getId()));
 
 

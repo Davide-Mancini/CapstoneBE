@@ -58,7 +58,7 @@ public class SessioneAstaService {
 
         RosaUtente nuovaRosa = new RosaUtente();
         nuovaRosa.setUtenti(utenteDaAggiungere);
-        nuovaRosa.setCreditiResidui(astaTrovata.getCrediti());
+        nuovaRosa.setCreditiResidui(500);
         nuovaRosa.setSessioneAsta(astaTrovata);
 
         // Crea le 25 caselle

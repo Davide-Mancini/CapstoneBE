@@ -9,6 +9,9 @@ import java.util.List;
 import java.util.UUID;
 
 @Entity
+@Table(name = "asta_calciatore", uniqueConstraints = {
+        @UniqueConstraint(name = "unique_calciatore_per_sessione", columnNames = {"calciatore_id", "sessione_asta_id"})
+})
 @Getter
 @Setter
 @NoArgsConstructor
@@ -26,7 +29,8 @@ public class AstaCalciatore {
     @ManyToOne
     private Utenti vincitore;
 
-    @OneToOne
+    @ManyToOne
+    @JoinColumn(name = "calciatore_id")
     private Calciatori calciatore;
 
     @OneToMany(mappedBy = "asta_calciatore")
