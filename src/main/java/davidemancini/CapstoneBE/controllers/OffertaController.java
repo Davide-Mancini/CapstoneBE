@@ -1,18 +1,18 @@
 package davidemancini.CapstoneBE.controllers;
 
-import davidemancini.CapstoneBE.entities.AstaCalciatore;
-import davidemancini.CapstoneBE.entities.Offerta;
-import davidemancini.CapstoneBE.entities.StatoAsta;
+import davidemancini.CapstoneBE.entities.*;
 import davidemancini.CapstoneBE.payloads.*;
 import davidemancini.CapstoneBE.services.AstaCalciatoreService;
 import davidemancini.CapstoneBE.services.OffertaService;
 import davidemancini.CapstoneBE.services.RosaUtenteService;
+import davidemancini.CapstoneBE.services.SessioneAstaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -28,6 +28,10 @@ public class OffertaController {
     private AstaCalciatoreService astaCalciatoreService;
     @Autowired
     private RosaUtenteService rosaUtenteService;
+    @Autowired
+    private SessioneAstaService sessioneAstaService;
+    @Autowired
+    private SimpMessagingTemplate messagingTemplate;
 
     @MessageMapping("/inviaofferta/{idAsta}")
     @SendTo("/topic/public/{idAsta}")
@@ -57,12 +61,18 @@ public class OffertaController {
         }
     }
 
-    @MessageMapping("/aggiungiuser")
-    @SendTo("/topic/public")
-    public Offerta addUSer(@Payload Offerta offerta, SimpMessageHeaderAccessor headerAccessor) {
-        headerAccessor.getSessionAttributes().put("username", offerta.getUtente_offerente());
-        return offerta;
+    @MessageMapping("/utente-entrato/{idAsta}")
+    @SendTo("/topic/utente-entrato/{idAsta}")
+    public SessioneAsta addUSer(@Payload AddUtenteDTO dto, @DestinationVariable UUID idAsta) {
+        SessioneAsta aggiornata = sessioneAstaService.addUtente(idAsta, dto.id());
+
+        return aggiornata;
     }
+//    @MessageMapping("/utente-entrato/{idAsta}")
+//    public void utenteEntrato(@Payload Utenti utente, @DestinationVariable UUID idAsta) {
+//        messagingTemplate.convertAndSend("/topic/utente-entrato/" + idAsta, utente);
+//    }
+
 
     @MessageMapping("/selezionaCalciatore/{idAsta}")
     @SendTo("/topic/calciatore-selezionato/{idAsta}")
@@ -109,7 +119,7 @@ public class OffertaController {
         if (!asta.getStatoAsta().equals(StatoAsta.APERTA)) {
             return new AstaTerminataDTO("Asta già chiusa", "Sistema", 0, "", 0);
         }
-       
+
         AstaTerminataDTO result = rosaUtenteService.terminaAsta(asta);
         System.out.println("RISULTATO TERMINA ASTA: " + result);
         return result;

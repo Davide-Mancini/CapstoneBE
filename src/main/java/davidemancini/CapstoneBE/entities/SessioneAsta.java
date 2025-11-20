@@ -1,9 +1,6 @@
 package davidemancini.CapstoneBE.entities;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.annotation.*;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,11 +30,12 @@ public class SessioneAsta {
 
     @ManyToMany
     @JoinTable(name = "sessione_utente")
-    private List<Utenti> utenti= new ArrayList<>();
+    @JsonManagedReference
+    private List<Utenti> utenti = new ArrayList<>();
 
     @OneToMany(mappedBy = "sessioneAsta")
     @JsonIgnore
-    private List<AstaCalciatore> astaCalciatore=new ArrayList<>();
+    private List<AstaCalciatore> astaCalciatore = new ArrayList<>();
 
     //COSTRUTTORE
 

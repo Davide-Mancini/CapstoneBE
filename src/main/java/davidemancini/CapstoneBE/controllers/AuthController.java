@@ -1,10 +1,12 @@
 package davidemancini.CapstoneBE.controllers;
 
 import davidemancini.CapstoneBE.entities.Utenti;
+import davidemancini.CapstoneBE.entities.UtentiMapper;
 import davidemancini.CapstoneBE.exceptions.MyValidationException;
 import davidemancini.CapstoneBE.payloads.LoginDTO;
 import davidemancini.CapstoneBE.payloads.LoginResponseDTO;
 import davidemancini.CapstoneBE.payloads.UtentiDTO;
+import davidemancini.CapstoneBE.payloads.UtentiDTOPesante;
 import davidemancini.CapstoneBE.services.AuthService;
 import davidemancini.CapstoneBE.services.UtenteService;
 import jakarta.servlet.http.Cookie;
@@ -27,14 +29,17 @@ public class AuthController {
     @Autowired
     private AuthService authService;
 
+    @Autowired
+    private UtentiMapper utentiMapper;
+
     @PostMapping("/login")
-    public LoginResponseDTO login (@RequestBody LoginDTO body, HttpServletResponse response){
+    public LoginResponseDTO login(@RequestBody LoginDTO body, HttpServletResponse response) {
         String token = authService.checkCredentialsAndGenerateToken(body);
         //SALVO IL TOKEN IN UN COOKIE COSI DA POTER RIMANERE LOGGATO ANCHE SE RIAGGIORNO LA PAGINA. MEGLIO RISPETTO AL SALVATAGGIO IN LOCAL STORAGE
-        Cookie cookie = new Cookie("jwt",token);
+        Cookie cookie = new Cookie("jwt", token);
         cookie.setHttpOnly(true);
         cookie.setPath("/");
-        cookie.setMaxAge(24*60*60);
+        cookie.setMaxAge(24 * 60 * 60);
         response.addHeader("Set-Cookie",
                 String.format("jwt=%s; Max-Age=%d; Path=/; HttpOnly; Secure; SameSite=Lax", token, 24 * 60 * 60)
         );
@@ -44,20 +49,21 @@ public class AuthController {
 
     @PostMapping("/registrazione")
     @ResponseStatus(HttpStatus.CREATED)
-    public Utenti registrazione (@RequestBody @Validated UtentiDTO body, BindingResult bindingResult){
-        if (bindingResult.hasErrors()){
+    public Utenti registrazione(@RequestBody @Validated UtentiDTO body, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
             throw new MyValidationException(bindingResult.getFieldErrors().stream().map(DefaultMessageSourceResolvable::getDefaultMessage).toList());
         }
         return utenteService.save(body);
     }
 
     @GetMapping("/me")
-    public Utenti utenteLoggato (HttpServletRequest request){
-        return authService.getUserFromCooki(request);
+    public UtentiDTOPesante utenteLoggato(HttpServletRequest request) {
+        Utenti utente = authService.getUserFromCooki(request);
+        return utentiMapper.toDTOPesante(utente);
     }
 
     @PostMapping("/logout")
-    public void logout(HttpServletRequest request, HttpServletResponse response){
-        authService.logout(request,response);
+    public void logout(HttpServletRequest request, HttpServletResponse response) {
+        authService.logout(request, response);
     }
 }
