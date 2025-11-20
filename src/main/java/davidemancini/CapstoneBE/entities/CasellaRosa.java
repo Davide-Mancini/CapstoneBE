@@ -1,5 +1,6 @@
 package davidemancini.CapstoneBE.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -19,6 +20,7 @@ public class CasellaRosa {
     private UUID id;
 
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "rosa_id")
     private RosaUtente rosa;
 
@@ -26,13 +28,14 @@ public class CasellaRosa {
     private Calciatori calciatore;
 
     private int prezzoAcquisto;
-   
+
     private String ruolo;
 
     private int posizione;
 
-    public CasellaRosa(String ruolo, int posizione) {
+    public CasellaRosa(String ruolo, int posizione, RosaUtente rosa) {
         this.ruolo = ruolo;
         this.posizione = posizione;
+        this.rosa = rosa;
     }
 }

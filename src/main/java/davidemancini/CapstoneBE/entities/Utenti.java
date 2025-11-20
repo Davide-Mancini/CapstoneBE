@@ -40,9 +40,9 @@ public class Utenti implements UserDetails {
     @JsonIgnore
     private List<SessioneAsta> sessioni = new ArrayList<>();
 
-    @OneToOne(mappedBy = "utenti")
-   
-    private RosaUtente rosa;
+    @OneToMany(mappedBy = "utenti")
+    @JsonIgnore
+    private List<RosaUtente> rosa = new ArrayList<>();
 
     //COSTRUTTORE
 

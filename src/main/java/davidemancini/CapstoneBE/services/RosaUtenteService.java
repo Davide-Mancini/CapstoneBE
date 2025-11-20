@@ -25,26 +25,26 @@ public class RosaUtenteService {
     @Autowired
     private CasellaRosaRepository casellaRosaRepository;
 
+    @Autowired
+    private SessioneAstaService sessioneAstaService;
 
-    public RosaUtente creaRosaPerUtente(Utenti utente) {
-        RosaUtente nuovaRosa = new RosaUtente(utente);
-
-        System.out.println("Nuova rosa id " + nuovaRosa.getId());
-        addCaselleByRuolo(nuovaRosa, "P", 3);
-        addCaselleByRuolo(nuovaRosa, "D", 8);
-        addCaselleByRuolo(nuovaRosa, "C", 8);
-        addCaselleByRuolo(nuovaRosa, "A", 6);
-        System.out.println("CASSELLE PRIMA DEL SALVATAGGIO: " + nuovaRosa.getCaselle().size());
-        nuovaRosa = rosaUtenteRepository.save(nuovaRosa);
-        System.out.println("CASSELLE DOPO SALVATAGGIO: " + nuovaRosa.getCaselle().size());
-        return nuovaRosa;
-    }
+//    public RosaUtente creaRosaPerUtente(Utenti utente) {
+//        RosaUtente nuovaRosa = new RosaUtente(utente);
+//
+//        System.out.println("Nuova rosa id " + nuovaRosa.getId());
+//        addCaselleByRuolo(nuovaRosa, "P", 3);
+//        addCaselleByRuolo(nuovaRosa, "D", 8);
+//        addCaselleByRuolo(nuovaRosa, "C", 8);
+//        addCaselleByRuolo(nuovaRosa, "A", 6);
+//        System.out.println("CASSELLE PRIMA DEL SALVATAGGIO: " + nuovaRosa.getCaselle().size());
+//        nuovaRosa = rosaUtenteRepository.save(nuovaRosa);
+//        System.out.println("CASSELLE DOPO SALVATAGGIO: " + nuovaRosa.getCaselle().size());
+//        return nuovaRosa;
+//    }
 
     private void addCaselleByRuolo(RosaUtente rosa, String ruolo, int count) {
         for (int i = 1; i <= count; i++) {
-            CasellaRosa c = new CasellaRosa(ruolo, i);
-            c.setRosa(rosa);
-            rosa.addCasella(c);
+            CasellaRosa c = new CasellaRosa(ruolo, i, rosa);
         }
 
     }
@@ -72,9 +72,10 @@ public class RosaUtenteService {
         Utenti vincitore = vincitrice.getUtente_offerente();
         Calciatori calciatore = astaCalciatore.getCalciatore();
         int prezzo = vincitrice.getValoreOfferta();
-        RosaUtente rosa = rosaUtenteRepository.findByUtenteIdWithCaselle(vincitore.getId())
+        SessioneAsta trovata = sessioneAstaService.findById(astaCalciatore.getSessioneAsta().getId());
+        RosaUtente rosa = rosaUtenteRepository.findByUtenteIdAndSessioneAstaIdWithCaselle(vincitore.getId(), trovata.getId())
                 .orElseThrow(() -> new RuntimeException("Rosa non trovata per utente " + vincitore.getId()));
-        
+
 
         CasellaRosa casella = primaCasellaLibera(rosa, calciatore.getRuolo());
         if (casella != null) {

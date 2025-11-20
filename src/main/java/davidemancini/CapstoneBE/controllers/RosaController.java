@@ -22,9 +22,9 @@ public class RosaController {
     @Autowired
     private RosaUtenteRepository rosaUtenteRepository;
 
-    @GetMapping("/utente/{utenteId}")
-    public ResponseEntity<RosaUtenteDTO> getRosaUtente(@PathVariable UUID utenteId) {
-        RosaUtente rosa = rosaUtenteRepository.findByUtenteIdWithCaselle(utenteId)
+    @GetMapping("/utente/{utenteId}/sessione/{sessioneId}")
+    public ResponseEntity<RosaUtenteDTO> getRosaUtente(@PathVariable UUID utenteId, @PathVariable UUID sessioneId) {
+        RosaUtente rosa = rosaUtenteRepository.findByUtenteIdAndSessioneAstaIdWithCaselle(utenteId, sessioneId)
                 .orElseThrow(() -> new RuntimeException("Rosa non trovata"));
 
         return ResponseEntity.ok(convertiInDTO(rosa));

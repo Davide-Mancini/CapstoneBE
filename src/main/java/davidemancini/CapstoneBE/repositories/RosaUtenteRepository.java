@@ -11,6 +11,8 @@ import java.util.UUID;
 
 @Repository
 public interface RosaUtenteRepository extends JpaRepository<RosaUtente, UUID> {
-    @Query("SELECT r FROM RosaUtente r LEFT JOIN FETCH r.caselle WHERE r.utenti.id = :utenteId")
-    Optional<RosaUtente> findByUtenteIdWithCaselle(@Param("utenteId") UUID utenteId);
+    @Query("SELECT r FROM RosaUtente r LEFT JOIN FETCH r.caselle WHERE r.utenti.id = :utenteId AND r.sessioneAsta.id = :astaId")
+    Optional<RosaUtente> findByUtentiIdAndSessioneAstaIdWithCaselle(@Param("utenteId") UUID utenteId, @Param("astaId") UUID astaId);
+
+    boolean existsByUtentiIdAndSessioneAstaId(UUID utenteId, UUID sessioneAstaId);
 }

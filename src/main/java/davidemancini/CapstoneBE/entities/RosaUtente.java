@@ -20,7 +20,8 @@ public class RosaUtente {
     @Setter(AccessLevel.NONE)
     private UUID id;
 
-    @OneToOne
+    @ManyToOne
+    @JoinColumn(name = "utenti_id")
     @JsonIgnore
     private Utenti utenti;
 
@@ -29,6 +30,10 @@ public class RosaUtente {
     @OneToMany(mappedBy = "rosa", cascade = CascadeType.ALL)
     @JsonIgnore
     private List<CasellaRosa> caselle = new ArrayList<>();
+
+    @ManyToOne
+    @JoinColumn(name = "sessione_asta_id")
+    private SessioneAsta sessioneAsta;
 
     public RosaUtente(Utenti utenti) {
         this.utenti = utenti;

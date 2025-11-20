@@ -33,45 +33,37 @@ public class SessioneAstaService {
     public SessioneAsta addUtente(UUID idAsta, UUID idUtente) {
         SessioneAsta astaTrovata = sessioneAstaRepository.findById(idAsta).orElseThrow(() -> new MyNotFoundException("Sessione asta con id " + idAsta + " non trovata"));
         Utenti utenteDaAggiungere = utenteService.findById(idUtente);
-        //RECUPERO LISTA DI UTENTI DALL'ASTA TROVATA
-        List<Utenti> listaUtenti = astaTrovata.getUtenti();
-        //CONTROLLO SE NELLA LISTA DI QUELL'ASTA C'è GIA L'UTENTE DA AGGIUNGERE'
-        if (!listaUtenti.contains(utenteDaAggiungere)) {
-            listaUtenti.add(utenteDaAggiungere);
-        }
-        astaTrovata.setUtenti(listaUtenti);
-        List<SessioneAsta> listaSessioni = utenteDaAggiungere.getSessioni();
-        listaSessioni.add(astaTrovata);
-        if (utenteDaAggiungere.getRosa() == null) {
-            RosaUtente nuovaRosa = new RosaUtente();
-            nuovaRosa.setUtenti(utenteDaAggiungere);
-            nuovaRosa.setCreditiResidui(300); // o il valore che usi
 
-            // Crea le 25 caselle
-            for (int i = 1; i <= 3; i++) {
-                CasellaRosa c = new CasellaRosa("P", i);
-                c.setRosa(nuovaRosa);
-                nuovaRosa.getCaselle().add(c);
-            }
-            for (int i = 1; i <= 8; i++) {
-                CasellaRosa c = new CasellaRosa("D", i);
-                c.setRosa(nuovaRosa);
-                nuovaRosa.getCaselle().add(c);
-            }
-            for (int i = 1; i <= 8; i++) {
-                CasellaRosa c = new CasellaRosa("C", i);
-                c.setRosa(nuovaRosa);
-                nuovaRosa.getCaselle().add(c);
-            }
-            for (int i = 1; i <= 6; i++) {
-                CasellaRosa c = new CasellaRosa("A", i);
-                c.setRosa(nuovaRosa);
-                nuovaRosa.getCaselle().add(c);
-            }
-
-            rosaUtenteRepository.save(nuovaRosa);
-            utenteDaAggiungere.setRosa(nuovaRosa);
+        if (!astaTrovata.getUtenti().contains(utenteDaAggiungere)) {
+            astaTrovata.getUtenti().add(utenteDaAggiungere);
         }
+
+
+        if (!utenteDaAggiungere.getSessioni().contains(astaTrovata)) {
+            utenteDaAggiungere.getSessioni().add(astaTrovata);
+        }
+
+
+        if (rosaUtenteRepository.existsByUtentiIdAndSessioneAstaId(idUtente, idAsta)) {
+            System.out.println("⚠️ Rosa già esistente per questo utente e questa asta → non ricreo.");
+            return sessioneAstaRepository.save(astaTrovata);
+        }
+
+
+        RosaUtente nuovaRosa = new RosaUtente();
+        nuovaRosa.setUtenti(utenteDaAggiungere);
+        nuovaRosa.setCreditiResidui(astaTrovata.getCrediti());
+        nuovaRosa.setSessioneAsta(astaTrovata);
+
+        // Crea le 25 caselle
+        for (int i = 1; i <= 3; i++) nuovaRosa.getCaselle().add(new CasellaRosa("P", i, nuovaRosa));
+        for (int i = 1; i <= 8; i++) nuovaRosa.getCaselle().add(new CasellaRosa("D", i, nuovaRosa));
+        for (int i = 1; i <= 8; i++) nuovaRosa.getCaselle().add(new CasellaRosa("C", i, nuovaRosa));
+        for (int i = 1; i <= 6; i++) nuovaRosa.getCaselle().add(new CasellaRosa("A", i, nuovaRosa));
+
+        rosaUtenteRepository.save(nuovaRosa);
+
+
         return sessioneAstaRepository.save(astaTrovata);
     }
 
