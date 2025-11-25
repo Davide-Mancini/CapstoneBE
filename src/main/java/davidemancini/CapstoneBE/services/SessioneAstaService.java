@@ -51,14 +51,14 @@ public class SessioneAstaService {
 
 
         if (rosaUtenteRepository.existsByUtentiIdAndSessioneAstaId(idUtente, idAsta)) {
-            System.out.println("⚠️ Rosa già esistente per questo utente e questa asta → non ricreo.");
+            System.out.println("Rosa già esistente per questo utente e questa asta → non ricreo.");
             return sessioneAstaRepository.save(astaTrovata);
         }
 
 
         RosaUtente nuovaRosa = new RosaUtente();
         nuovaRosa.setUtenti(utenteDaAggiungere);
-        nuovaRosa.setCreditiResidui(500);
+        nuovaRosa.setCreditiResidui(astaTrovata.getCrediti());
         nuovaRosa.setSessioneAsta(astaTrovata);
 
         // Crea le 25 caselle
