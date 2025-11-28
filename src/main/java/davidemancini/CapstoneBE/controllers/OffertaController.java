@@ -17,6 +17,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.Map;
 import java.util.UUID;
 
@@ -123,5 +124,13 @@ public class OffertaController {
         AstaTerminataDTO result = rosaUtenteService.terminaAsta(asta);
         System.out.println("RISULTATO TERMINA ASTA: " + result);
         return result;
+    }
+
+    @MessageMapping("/chat")
+    @SendTo("/topic/messages")
+    public ChatMessage send(@Payload ChatMessageDTO body) {
+        System.out.println("<<< MESSAGGIO RICEVUTO: " + body.nickname() + " dice: " + body.content());
+        ChatMessage message = new ChatMessage(body.nickname(), body.content(), LocalDateTime.now(), body.immagine());
+        return message;
     }
 }
