@@ -126,9 +126,9 @@ public class OffertaController {
         return result;
     }
 
-    @MessageMapping("/chat")
-    @SendTo("/topic/messages")
-    public ChatMessage send(@Payload ChatMessageDTO body) {
+    @MessageMapping("/chat/{astaId}")
+    @SendTo("/topic/messages/{astaId}")
+    public ChatMessage send(@Payload ChatMessageDTO body, @DestinationVariable UUID astaId) {
         System.out.println("<<< MESSAGGIO RICEVUTO: " + body.nickname() + " dice: " + body.content());
         ChatMessage message = new ChatMessage(body.nickname(), body.content(), LocalDateTime.now(), body.immagine());
         return message;
