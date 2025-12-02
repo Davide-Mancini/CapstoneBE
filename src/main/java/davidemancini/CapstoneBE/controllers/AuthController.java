@@ -41,7 +41,7 @@ public class AuthController {
         cookie.setPath("/");
         cookie.setMaxAge(24 * 60 * 60);
         response.addHeader("Set-Cookie",
-                String.format("jwt=%s; Max-Age=%d; Path=/; HttpOnly; Secure; SameSite=Lax", token, 24 * 60 * 60)
+                String.format("jwt=%s; Max-Age=%d; Path=/; HttpOnly; Secure; SameSite=None", token, 24 * 60 * 60)
         );
         response.addCookie(cookie);
         return new LoginResponseDTO(token);
