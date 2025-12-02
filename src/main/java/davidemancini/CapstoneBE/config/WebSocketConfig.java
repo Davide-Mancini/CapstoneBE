@@ -21,7 +21,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         registry.addEndpoint("/ws")//FACOLTATIVO
-                .setAllowedOriginPatterns("http://localhost:5173")//ENDPOINT CONSENTITI
+                .setAllowedOriginPatterns("http://localhost:5173", "https://fantahub-red.vercel.app")//ENDPOINT CONSENTITI
                 .withSockJS();//FALLBACK
 
     }

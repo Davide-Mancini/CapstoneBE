@@ -23,28 +23,29 @@ import java.util.List;
 public class SecurityConfig {
 
     @Bean
-    public SecurityFilterChain securityFilterChain (HttpSecurity httpSecurity) throws Exception {
-        httpSecurity.formLogin(formLogin->formLogin.disable());
-        httpSecurity.csrf(csrf-> csrf.disable());
-        httpSecurity.sessionManagement(session-> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
-        httpSecurity.authorizeHttpRequests(req->req.requestMatchers("/**").permitAll());
+    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
+        httpSecurity.formLogin(formLogin -> formLogin.disable());
+        httpSecurity.csrf(csrf -> csrf.disable());
+        httpSecurity.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+        httpSecurity.authorizeHttpRequests(req -> req.requestMatchers("/**").permitAll());
         httpSecurity.cors(Customizer.withDefaults());
         return httpSecurity.build();
     }
+
     @Bean
-    public PasswordEncoder getBCrypt(){
+    public PasswordEncoder getBCrypt() {
         return new BCryptPasswordEncoder(12);
     }
 
     @Bean
-    public CorsConfigurationSource corsConfigurationSource(){
+    public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("http://localhost:8080", "http://localhost:5173"));
+        configuration.setAllowedOrigins(List.of("http://localhost:8080", "http://localhost:5173", "https://fantahub-red.vercel.app"));
         configuration.setAllowedMethods(List.of("*"));
         configuration.setAllowedHeaders(List.of("*"));
         configuration.setAllowCredentials(true);
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**",configuration);
+        source.registerCorsConfiguration("/**", configuration);
         return source;
     }
 }
